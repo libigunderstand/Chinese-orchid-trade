@@ -1,12 +1,51 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/attention/attention",
+    "pages/store/store",
+    "pages/forum/forum",
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#95c519",
     "navigationBarTitleText": "兰花交易网",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/resources/home.png",
+        "selectedIconPath": "/resources/homeChange.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/attention/attention",
+        "iconPath": "/resources/followed.png",
+        "selectedIconPath": "/resources/followedChange.png",
+        "text": "关注"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "iconPath": "/resources/wudianpu.png",
+        "selectedIconPath": "/resources/wudianpuChange.png",
+        "text": "店铺"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "iconPath": "/resources/forum.png",
+        "selectedIconPath": "/resources/forumChange.png",
+        "text": "论坛"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "/resources/wode.png",
+        "selectedIconPath": "/resources/wodeChange.png",
+        "text": "我的"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
