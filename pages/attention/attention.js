@@ -1,18 +1,36 @@
 // pages/attention/attention.js
 Page({
-
+  
   /**
    * 页面的初始数据
    */
   data: {
+  },
 
+  getDatas(){
+    var that = this
+    wx.request({
+      url: 'https://m.hmlan.com/Member/Attention/ListTuiShopAuctions?&page=1&pagesize',
+      data: {
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success (res) {
+        that.setData({
+          data: res.data
+        })
+        console.log(that.data);
+        
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getDatas()
   },
 
   /**
