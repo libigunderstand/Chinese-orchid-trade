@@ -2,283 +2,307 @@
 <view class="container">
   <view class="top">
     <view class="download">
-      <cover-image src="/resources/down.png" class="down"></cover-image>
+      <navigator url="/pages/index/download/download"><image src="/resources/down.png" class="down" bindtap="toDownload"></image></navigator>
     </view>
     <view class="searchWrap">
       <view class="text">
-        <cover-image src="/resources/sousuo.png" class="sousuo"></cover-image>
+        <image src="/resources/sousuo.png" class="sousuo"></image>
         <text>可搜索物品或商店</text>
       </view>
     </view>
     <view class="message">
-      <cover-image class="msg" src="/resources/message.png"></cover-image>
+      <image class="msg" src="/resources/message.png"></image>
     </view>
   </view>
-  <swiper indicator-dots="true" indicator-color="rgba(0, 0, 0, .2)" indicator-active-color="blue" autoplay="true" interval="3000">
-    <swiper-item>
-      <cover-image src="https://static.hmlan.com/app/photo/lhwg_20191201.jpg"></cover-image>
-    </swiper-item>
-    <swiper-item>
-      <cover-image src="https://static.hmlan.com/h5/img/project/dlapp_20171202.jpg"></cover-image>
-    </swiper-item>
-    <swiper-item>
-      <cover-image src="https://static.hmlan.com/h5/img/project/appbanner_201710_02.jpg"></cover-image>
-    </swiper-item>
-  </swiper>
-  <view class="block-border">
-    <view class="recommend">
-				<view class="gopage" data-to="searchResult">
-					<cover-image src="https://static.hmlan.com/images/new_icon/index/11.png"/>
-					<span>逛逛</span>
-				</view>
-				<view class="gopage" data-to="searchResult">
-					<cover-image src="https://static.hmlan.com/images/new_icon/index/12.png"/>
-					<span>分类</span>
-				</view>
-				<view class="gopage" data-to="searchResult">
-					<cover-image src="https://static.hmlan.com/images/new_icon/index/13.png"/>
-					<span>优店</span>
-				</view>
-				<view class="gopage" data-to="searchResult">
-					<cover-image src="https://static.hmlan.com/images/new_icon/index/14.png"/>
-					<span>新手导购</span>
-				</view>
-				<view class="gopage" data-to="searchResult">
-					<cover-image src="https://static.hmlan.com/images/new_icon/index/15.png"/>
-					<span>捡漏</span>
-				</view>
-				<view class="gopage" data-to="searchResult">
-					<cover-image src="https://static.hmlan.com/images/new_icon/index/16.png"/>
-					<span>最新上传</span>
-				</view>
-				<view class="gopage" data-to="searchResult">
-					<cover-image src="https://static.hmlan.com/images/new_icon/index/17.png"/>
-					<span>当天结束</span>
-				</view>
-				<view class="gopage" data-to="searchResult">
-					<cover-image src="https://static.hmlan.com/images/new_icon/index/18.png"/>
-					<span>推荐品种</span>
-				</view>
-			</view>
-      <view class="adv">
-        <cover-image src="http://m.hmlan.com/h5/content/img/project/h1.jpg"/>
-      </view>
-      <view class="kinds">
-        <view class="tit">
-          <cover-image src="http://m.hmlan.com/h5/content/img/index/index-title-1.png" />
-        </view>
-        <view class="kind-list">
-          <view class="kindWrap">
-            <view class="list-wrapper" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="https://static.hmlan.com/images/new_icon/index/21.png"/></view>
-              <view class="introduce">
-                <span class="t1">传统品种</span>
-                <span class="t2">程梅0元起拍</span>
-              </view>
-            </view>
+  <scroll-view scroll-y="true" bindscrolltolower="pullUp">
+    <swiper indicator-dots="true" indicator-color="rgba(0, 0, 0, .2)" indicator-active-color="blue" autoplay="true" interval="3000">
+      <swiper-item>
+          <image src="https://static.hmlan.com/app/photo/lhwg_20191201.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://static.hmlan.com/h5/img/project/dlapp_20171202.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://static.hmlan.com/h5/img/project/appbanner_201710_02.jpg"></image>
+      </swiper-item>
+    </swiper>
+    <view class="block-border">
+      <view class="recommend">
+          <view class="gopage">
+            <image src="https://static.hmlan.com/images/new_icon/index/11.png"></image>
+            <span>逛逛</span>
           </view>
-          <view class="kindWrap">
-            <view class="list-wrapper" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="https://static.hmlan.com/images/new_icon/index/22.png"/></view>
-              <view class="introduce">
-                <span class="t1">下山品种</span>
-                <span class="t2">网罗各地新品种</span>
-              </view>
-            </view>
+          <view class="gopage">
+            <image src="https://static.hmlan.com/images/new_icon/index/12.png"></image>
+            <span>分类</span>
           </view>
-          <view class="kindWrap">
-            <view class="list-wrapper" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="https://static.hmlan.com/images/new_icon/index/23.png"/></view>
-              <view class="introduce">
-                <span class="t1">组培品种</span>
-                <span class="t2">跟随市场新动态</span>
-              </view>
-            </view>
+          <view class="gopage">
+            <image src="https://static.hmlan.com/images/new_icon/index/13.png"/>
+            <span>优店</span>
           </view>
-          <view class="kindWrap">
-            <view class="list-wrapper" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="https://static.hmlan.com/images/new_icon/index/24.png"/></view>
-              <view class="introduce">
-                <span class="t1">杂交品种</span>
-                <span class="t2">放眼科技领域</span>
-              </view>
-            </view>
+          <view class="gopage">
+            <image src="https://static.hmlan.com/images/new_icon/index/14.png"/>
+            <span>新手导购</span>
           </view>
-          <view class="kindWrap">
-            <view class="list-wrapper" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="https://static.hmlan.com/images/new_icon/index/25.png"/></view>
-              <view class="introduce">
-                <span class="t1">带花专区</span>
-                <span class="t2">货真价实，看花</span>
-              </view>
-            </view>
+          <view class="gopage">
+            <image src="https://static.hmlan.com/images/new_icon/index/15.png"/>
+            <span>捡漏</span>
           </view>
-          <view class="kindWrap">
-            <view class="list-wrapper" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="https://static.hmlan.com/images/new_icon/index/26.png"/></view>
-              <view class="introduce">
-                <span class="t1">带芽专区</span>
-                <span class="t2">买一送一，超值</span>
-              </view>
-            </view>
+          <view class="gopage">
+            <image src="https://static.hmlan.com/images/new_icon/index/16.png"/>
+            <span>最新上传</span>
           </view>
-          <view class="kindWrap">
-            <view class="list-wrapper" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="https://static.hmlan.com/images/new_icon/index/27.png"/></view>
-              <view class="introduce">
-                <span class="t1">植料专区</span>
-                <span class="t2">贴心呵护兰宝宝</span>
-              </view>
-            </view>
+          <view class="gopage">
+            <image src="https://static.hmlan.com/images/new_icon/index/17.png"/>
+            <span>当天结束</span>
           </view>
-          <view class="kindWrap">
-            <view class="list-wrapper" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="https://static.hmlan.com/images/new_icon/index/28.png"/></view>
-              <view class="introduce">
-                <span class="t1">花盆专区</span>
-                <span class="t2">花小钱买好兰盆</span>
-              </view>
-            </view>
+          <view class="gopage">
+            <image src="https://static.hmlan.com/images/new_icon/index/18.png"/>
+            <span>推荐品种</span>
           </view>
         </view>
-		  </view>
-      <view class="adv">
-        <cover-image src="https://static.hmlan.com/h5/img/project/h3.jpg"/>
-      </view>
-      <view class="kinds">
-        <view class="tit">
-          <cover-image src="http://m.hmlan.com/h5/content/img/index/index-title-2.png" />
+        <view class="adv">
+          <image src="http://m.hmlan.com/h5/content/img/project/h1.jpg" class="adv-image"></image>
         </view>
-        <view class="kind-list">
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/chunlan.png"/></view>
-              <view class="introduce_">
-                春兰
+        <view class="kinds">
+          <view class="tit">
+            <image src="http://m.hmlan.com/h5/content/img/index/index-title-1.png" />
+          </view>
+          <view class="kind-list">
+            <view class="kindWrap">
+              <view class="list-wrapper" data-to="searchResult">
+                <view class="kind-tu"><image src="https://static.hmlan.com/images/new_icon/index/21.png"/></view>
+                <view class="introduce">
+                  <span class="t1">传统品种</span>
+                  <span class="t2">程梅0元起拍</span>
+                </view>
               </view>
             </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/huilan.png"/></view>
-              <view class="introduce_">
-                蕙兰
+            <view class="kindWrap">
+              <view class="list-wrapper" data-to="searchResult">
+                <view class="kind-tu"><image src="https://static.hmlan.com/images/new_icon/index/22.png"/></view>
+                <view class="introduce">
+                  <span class="t1">下山品种</span>
+                  <span class="t2">网罗各地新品种</span>
+                </view>
               </view>
             </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/hanlan.png"/></view>
-              <view class="introduce_">
-                寒兰
+            <view class="kindWrap">
+              <view class="list-wrapper" data-to="searchResult">
+                <view class="kind-tu"><image src="https://static.hmlan.com/images/new_icon/index/23.png"/></view>
+                <view class="introduce">
+                  <span class="t1">组培品种</span>
+                  <span class="t2">跟随市场新动态</span>
+                </view>
               </view>
             </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/molan.png"/></view>
-              <view class="introduce_">
-                墨兰
+            <view class="kindWrap">
+              <view class="list-wrapper" data-to="searchResult">
+                <view class="kind-tu"><image src="https://static.hmlan.com/images/new_icon/index/24.png"/></view>
+                <view class="introduce">
+                  <span class="t1">杂交品种</span>
+                  <span class="t2">放眼科技领域</span>
+                </view>
               </view>
             </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/jianlan.png"/></view>
-              <view class="introduce_">
-                建兰
+            <view class="kindWrap">
+              <view class="list-wrapper" data-to="searchResult">
+                <view class="kind-tu"><image src="https://static.hmlan.com/images/new_icon/index/25.png"/></view>
+                <view class="introduce">
+                  <span class="t1">带花专区</span>
+                  <span class="t2">货真价实，看花</span>
+                </view>
               </view>
             </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/chunjian.png"/></view>
-              <view class="introduce_">
-                春剑
+            <view class="kindWrap">
+              <view class="list-wrapper" data-to="searchResult">
+                <view class="kind-tu"><image src="https://static.hmlan.com/images/new_icon/index/26.png"/></view>
+                <view class="introduce">
+                  <span class="t1">带芽专区</span>
+                  <span class="t2">买一送一，超值</span>
+                </view>
               </view>
             </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/lianbanlan.png"/></view>
-              <view class="introduce_">
-                莲瓣
+            <view class="kindWrap">
+              <view class="list-wrapper" data-to="searchResult">
+                <view class="kind-tu"><image src="https://static.hmlan.com/images/new_icon/index/27.png"/></view>
+                <view class="introduce">
+                  <span class="t1">植料专区</span>
+                  <span class="t2">贴心呵护兰宝宝</span>
+                </view>
               </view>
             </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/songchun.png"/></view>
-              <view class="introduce_">
-                送春
-              </view>
-            </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/doubanlan.png"/></view>
-              <view class="introduce_">
-                豆瓣
-              </view>
-            </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/yanglan.png"/></view>
-              <view class="introduce_">
-                洋兰
-              </view>
-            </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/zhiliao.png"/></view>
-              <view class="introduce_">
-                植料
-              </view>
-            </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/chaye.png"/></view>
-              <view class="introduce_">
-                茶叶
-              </view>
-            </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/chahua.png"/></view>
-              <view class="introduce_">
-                茶花
-              </view>
-            </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/penjing.png"/></view>
-              <view class="introduce_">
-                盆景
-              </view>
-            </view>
-          </view>
-          <view class="kindWrap_">
-            <view class="list-wrap_" data-to="searchResult">
-              <view class="kind-tu"><cover-image src="http://m.hmlan.com/h5/content/img/index/qita.png"/></view>
-              <view class="introduce_">
-                其他
+            <view class="kindWrap">
+              <view class="list-wrapper" data-to="searchResult">
+                <view class="kind-tu"><image src="https://static.hmlan.com/images/new_icon/index/28.png"/></view>
+                <view class="introduce">
+                  <span class="t1">花盆专区</span>
+                  <span class="t2">花小钱买好兰盆</span>
+                </view>
               </view>
             </view>
           </view>
         </view>
-		  </view>
-      <view class="adv" style="margin:0">
-        <cover-image src="http://m.hmlan.com/h5/content/img/project/h2.jpg"/>
+        <view class="adv">
+          <image src="https://static.hmlan.com/h5/img/project/h3.jpg" class="adv-image"/>
+        </view>
+        <view class="kinds">
+          <view class="tit">
+            <image src="http://m.hmlan.com/h5/content/img/index/index-title-2.png" />
+          </view>
+          <view class="kind-list">
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/chunlan.png"/></view>
+                <view class="introduce_">
+                  春兰
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/huilan.png"/></view>
+                <view class="introduce_">
+                  蕙兰
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/hanlan.png"/></view>
+                <view class="introduce_">
+                  寒兰
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/molan.png"/></view>
+                <view class="introduce_">
+                  墨兰
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/jianlan.png"/></view>
+                <view class="introduce_">
+                  建兰
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/chunjian.png"/></view>
+                <view class="introduce_">
+                  春剑
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/lianbanlan.png"/></view>
+                <view class="introduce_">
+                  莲瓣
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/songchun.png"/></view>
+                <view class="introduce_">
+                  送春
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/doubanlan.png"/></view>
+                <view class="introduce_">
+                  豆瓣
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/yanglan.png"/></view>
+                <view class="introduce_">
+                  洋兰
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/zhiliao.png"/></view>
+                <view class="introduce_">
+                  植料
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/chaye.png"/></view>
+                <view class="introduce_">
+                  茶叶
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/chahua.png"/></view>
+                <view class="introduce_">
+                  茶花
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/penjing.png"/></view>
+                <view class="introduce_">
+                  盆景
+                </view>
+              </view>
+            </view>
+            <view class="kindWrap_">
+              <view class="list-wrap_" data-to="searchResult">
+                <view class="kind-tu"><image src="http://m.hmlan.com/h5/content/img/index/qita.png"/></view>
+                <view class="introduce_">
+                  其他
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="adv" style="margin:0">
+          <image src="http://m.hmlan.com/h5/content/img/project/h2.jpg" class="adv-image"/>
+        </view>
+        <view class="kinds">
+          <view class="tit">
+            <image src="http://m.hmlan.com/h5/content/img/index/index-title-4.png" />
+          </view>   
+        </view>
+    </view>
+    <view class="panel">
+      <view class="panel-list">
+        <view class="viewGoods" wx:for="{{showList}}" wx:key="AucId">
+          <view class="panel-wrapper">
+            <view class="panel-tu">
+              <image src="{{item.MidSrc}}"></image>
+            </view>
+            <view class="panel-h4">
+              <view class="panel-title">{{item.AucTitle}}</view>
+              <view class="panel-price">￥ {{item.StartPrice}}</view>
+              <view class="panel-desc">
+                <text class="c9">剩余{{item.OrchidBigSort}} 天</text>
+              </view>
+              <view class="panel-hummer">
+                <text class="hummer-num">{{item.PriceNum}}</text>
+                <text class="price">次出价</text>
+              </view>
+            </view>
+          </view>
+        </view>
       </view>
-      <view class="kinds">
-        <view class="tit">
-          <cover-image src="http://m.hmlan.com/h5/content/img/index/index-title-4.png" />
-        </view>   
-      </view>
-  </view>
+    </view>
+  </scroll-view>
 </view>
