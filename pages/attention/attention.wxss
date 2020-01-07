@@ -1,1 +1,108 @@
 /* pages/attention/attention.wxss */
+@import "../../resources/styles/iconfont.wxss";
+page{
+  background: #EDEDED;
+}
+
+/* 提示登录 */
+.login{
+  background: #fff;
+  padding: 15px 0;
+}
+.login text{
+  display: block;
+  text-align: center;
+  color: #999;
+  font-size: 15px;
+  padding: 2px 0;
+}
+.login button{
+  background: #95c519;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 10px;
+  font-weight: 500;
+  padding: 0;
+}
+
+.recom{
+  line-height: 30px;
+  margin-left: 12px;
+  margin-top: 10px;
+  color: #666;
+}
+
+.panel{
+  padding: 10px 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.panel .items{
+  width: 172px;
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.items .free{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.items image{
+  width: 185px;
+  height: 185px;
+}
+
+.details .title{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 9px;
+  color: #666;
+}
+
+.details .price{
+  padding: 0 9px 1px 5px;
+  color: #f60000;
+  font-size: 14px;
+}
+
+.details .shop{
+  height: 40px;
+}
+
+.details .shop image{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-left: 6px;
+  margin-top: 5px;
+}
+
+.details .shop text{
+  font-size: 14px;
+  display: block;
+  height: 30px;
+  color: #95c519;
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 41px;
+  margin-top: -36px;
+}
+
+.ml5{
+  margin-left: 5px;
+}
