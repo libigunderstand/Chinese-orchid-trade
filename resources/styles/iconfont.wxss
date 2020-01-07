@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1578319457142'); /* IE9 */
+  src: url('iconfont.eot?t=1578319457142#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAR0AAsAAAAACNQAAAQnAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqFBIQyATYCJAMQCwoABCAFhG0HUxuvB8gOJcHAiMCggEBABF9rb/1mZ38mhApRsgKWUbHExkbn0DkSmtSV5/In8z+56Q9SEU1NnZogAYK/kJaqhs1pmJog8+N22nG74hOHe20swLL5LMtlrEV7n48JGFga0Bibu84DLZAv6F8BdgZrkf9lAi2GxUN2K+s5YCMzZgXiERdxwSZllWvKQxEaJRszxCtgK2mN8QbAs//7+AepYQOSugJj4dF1hQCKf8LvL8xZy6w+lwCy4dzgtlFhEcjEban3HDNMLGJqUYazrABFkRiqp/fnR4uFkm9FW8x/eYRKIhpgaNso6lKy4idbQPCzV1qm+0JaJZqcpxd04CuIFsI4OMyA0NLlmuVva8/yBrBYdrb2E59MlMFgzBqXa81t5oWuDwbK1Gpa6Pxs1uYfnjV0IHrvOdrODunUI3qa8uB00HaUTufp2Q6cd7MUzT7W/17r7Q1YvGkwT9NlDy1sU0uYGnvy+R57Y0rr7s5OdcxRc9Fns9c8b867M/aYIf+DwfOM09HZNbAaGUZdIMQQ/ZwXJz1EoPPQzcacfOp9w8a6HaFtzT76Il7niax7x+lpjhYJpmmPwNlyvVcQ3XEAJLxPY5z/sav4nMUeGyvedU7kSVMD3kwtdBy5VL6SRVPMchkRK1OiOJ61QpNvO2AGY4ftbdv56MVFN7bNHXeOZmRmqszGYbdjhtvyYswKGEa+o09l/qcsIf1BDcyFVTB02ty2nSuD/5+uZW2pODFwovIE1UGdqzw3cK5CdyWLO/3nHrIzukF0Dzaf7GQ3ZKS9TTykdt50RNrfv9/JSh/5Julw91O/74aXLw3GrQkaTw1o+jQWWw3xB7barnqvLBYIIqeTwk+Eraokqz6rK0RnTOfHS5xLCb9ClkIheWKTB92MsqwyWQ/Ykez3IX3rYc1QWjM9QAXw8pl5lpkAQPqfPlMpqrIw8/4cf2PleP3noHP+v2LPAvixfsL1fS9UBkwHX1gGy/4KMrAlqwrDlrOstKUaKzshf6balljxB8jQ49cQ+n64lFD000iaDKFSTBIzdRG1VktoKDbQYkHV9la9CEyRbYF5SwRCl/NIOnxGpctbYqb+RG3AXzR0BRMtjsP9wFbTgduVERiXxAQobwzF+UqF0HKQdkF5KyYalnGJpMJnd2CEGg+jKYnJ2XQVpsCIIZaoR0SpJClEhYRSjlYS12EymRJVEUoJxicTxSSpyk1KEpa9KJGvlIOdHQQMFwkjgOIZg8LxKSkI3e4ku9z3W2FEhslwETUVFeEOGIIa3j8qRaJkgFilVUAVlzJcbYRIKhJJSE8TIijJoSpJN0ZmJpRQqvJxEhg+UiJxh5hKriSqkxDVJk6vl99hvZtYxXgwBwNhIiyEDfU9zhVhNgSmkOMKHu6l4uJyK3tcPMxV8MW2WyRXFnvGAQAA') format('woff2'),
+  url('iconfont.woff?t=1578319457142') format('woff'),
+  url('iconfont.ttf?t=1578319457142') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1578319457142#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiage:before {
+  content: "\e600";
+}
+
+.icon-renminbi:before {
+  content: "\e6d1";
+}
+
+.icon-paimaizhuanchangmorenz:before {
+  content: "\e613";
+}
+

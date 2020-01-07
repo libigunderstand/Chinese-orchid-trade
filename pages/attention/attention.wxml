@@ -1,4 +1,26 @@
 <!--pages/attention/attention.wxml-->
-<view>
-  关注页~
+<view class="login">
+  <text>您还没有登录，登录后查看更多推荐</text>
+  <button>马上登录</button>
+</view>
+<view class="recom">为您推荐</view>
+<view class="panel">
+  <view class="items" wx:for="{{data}}" wx:key="unique">
+    <image wx:if="{{item.EmsTraPrice==0}}" class="free" src="https://static.hmlan.com/h5/img/free.png"></image>
+    <image src="{{item.MidSrc}}"></image>
+    <view class="details">
+      <text class="title">{{item.AucTitle}}</text>
+      <view class="price">
+        <icon class=" iconfont icon-renminbi"></icon>
+        <text wx:if="{{item.AucType!=1}}">{{item.StartPrice}}</text>
+        <text wx:if="{{item.AucType==1}}">{{item.ImmPrice}}</text>
+        <icon wx:if="{{item.AucType!=1}}" class=" iconfont icon-paimaizhuanchangmorenz ml5"></icon>
+        <icon wx:if="{{item.AucType!=0}}" class=" iconfont icon-jiage ml5"></icon>
+      </view>
+      <view class="shop">
+        <image src="{{item.ShopIcon}}"></image>
+        <text>{{item.ShopName}}</text>
+      </view>
+    </view>
+  </view>
 </view>
