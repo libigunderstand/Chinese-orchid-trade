@@ -1,0 +1,76 @@
+.down-wrap{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.hd{
+  padding-top: 30rpx;
+  display: flex;
+  padding: 30rpx 30rpx 14rpx 30rpx;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* .logo{
+  width: 140rpx;
+  height: 140rpx;
+  margin: 0 40rpx 40rpx 40rpx;
+} */
+.logo > image {
+  width: 140rpx;
+  height: 140rpx;
+}
+.top-right{
+  flex: 1;
+  margin: 0 40rpx 0 40rpx;
+}
+.title {
+  font-size: 48rpx;
+  color: #666;
+  display: block;
+  margin: 10rpx 0 8rpx;
+}
+.title2 {
+  font-size: 36rpx;
+  color: #eb6100;
+}
+.bd-btn{
+  padding: 2rpx 30rpx 0;
+}
+.down-btn{
+  background: #95C519;
+  color: #fff;
+}
+.open-btn{
+  background: #e1edb7;
+  color: #8cbf08;
+}
+.common{
+  margin-bottom: 30rpx;
+  display: inline-block;
+  text-align: center;
+  height: 90rpx;
+  border-radius: 20rpx;
+  width: 100%;
+  line-height: 90rpx;
+  font-size: 34rpx;
+}
+.downloadbg{
+  width: 100%;
+}
+.downloadbg image{
+  width: 100%;
+  height: 764rpx;
+}
+.ft{
+  margin: 30rpx;
+  text-align: center;
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+}
+.ft > view{
+  color: #999;
+  margin: 0 30rpx;
+  font-size: 28rpx;
+  text-decoration: none;
+}

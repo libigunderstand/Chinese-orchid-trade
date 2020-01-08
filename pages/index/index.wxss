@@ -1,4 +1,5 @@
 /**index.wxss**/
+@import "../../resources/styles/iconfont.wxss";
 .container {
   width: 100%;
   height: 100%;

@@ -24,6 +24,12 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
+  toIndex: () => {
+    console.log(0)
+    wx.navigateBack({
+      
+    })()
+  },
   onShow: function () {
     
   },

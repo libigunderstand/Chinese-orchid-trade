@@ -4,7 +4,7 @@
     <view class="download">
       <navigator url="/pages/index/download/download"><image src="/resources/down.png" class="down" bindtap="toDownload"></image></navigator>
     </view>
-    <view class="searchWrap">
+    <view class="searchWrap" bindtap="toSearch">
       <view class="text">
         <image src="/resources/sousuo.png" class="sousuo"></image>
         <text>可搜索物品或商店</text>
@@ -291,7 +291,10 @@
             </view>
             <view class="panel-h4">
               <view class="panel-title">{{item.AucTitle}}</view>
-              <view class="panel-price">￥ {{item.StartPrice}}</view>
+              <view class="panel-price">￥ {{item.StartPrice}}
+                <icon wx:if="{{item.AucType!=1}}" class=" iconfont icon-paimaizhuanchangmorenz ml5"></icon>
+                <icon wx:if="{{item.AucType!=0}}" class=" iconfont icon-jiage ml5"></icon>
+              </view>
               <view class="panel-desc">
                 <text class="c9">剩余{{item.OrchidBigSort}} 天</text>
               </view>

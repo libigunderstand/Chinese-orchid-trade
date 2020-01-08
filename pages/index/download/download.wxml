@@ -4,8 +4,8 @@
 			<image src="http://static.hmlan.com/app/images/app.jpg"/>
 		</view>
 		<view class="top-right">
-			<p style="font-size:.26rem;color:#666;">兰花交易网App</p>
-			<p style="font-size:.18rem;color:#eb6100;">中国兰花第一门户网站</p>
+			<text class="title">兰花交易网App</text>
+			<text class="title2">中国兰花第一门户网站</text>
 		</view>
 	</view>
 	<view class="bd-btn">
@@ -16,8 +16,8 @@
 		<image src="http://static.hmlan.com/app/images/appdownload2.jpg"/>
 	</view>
 	<view class="ft">
-		<a>登录</a>
-		<a href="../index.html">兰花交易网首页</a>
-		<a>下载客户端</a>
+		<view>登录</view>
+		<view bindtap="toIndex">兰花交易网首页</view>
+		<view>下载客户端</view>
 	</view>
 </view>

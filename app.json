@@ -5,7 +5,8 @@
     "pages/store/store",
     "pages/forum/forum",
     "pages/mine/mine",
-    "pages/index/download/download"
+    "pages/index/download/download",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
