@@ -1,4 +1,22 @@
-<!--pages/store/store.wxml-->
-<view>
-  店铺页~
+<view class="content">
+    <view class="nav-wrapper">
+        <view class="navbar">
+            <view data-type="Loc" bindtap="handleSlect">
+                <text>{{Loc}}</text>
+                <image></image>
+            </view>
+            <view data-type="OrderStyle" bindtap="handleSlect">
+                <text>{{OrderStyle}}</text>
+                <image></image>
+            </view>
+            <view data-type="IsTui" bindtap="handleSlect">
+                <text>{{IsTui}}</text>
+                <image></image>
+            </view>
+        </view>
+        <view wx:if="{{isShow}}"  class="mask"></view>
+    </view>
+    <scroll-view scroll-y wx:if="{{storeList}}" class="list" >
+        <list-item wx:for="{{storeList}}" wx:key="{{item.ShopId}}" item="{{item}}"></list-item>
+    </scroll-view>
 </view>
