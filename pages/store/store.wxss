@@ -1,25 +1,26 @@
-page{
+page {
     height: 100%;
 }
-.content{
+.content {
     height: 100%;
     position: relative;
 }
-.nav-wrapper{
+.nav-wrapper {
     position: fixed;
     width: 100%;
+    z-index: 9;
 }
-.navbar{
+.navbar {
     height: 80rpx;
     background: #fff;
     border-bottom: 1rpx solid #eeeeee;
     display: flex;
     box-sizing: border-box;
 }
-.navbar>view{
+.navbar > view {
     width: 33.33%;
     border-right: 1rpx solid #eee;
-    font-size: 15px;
+    font-size: 30rpx;
     color: #666;
     display: flex;
     align-items: center;
@@ -27,12 +28,35 @@ page{
     height: 100%;
 }
 
-.navbar>view>image{
-    height: 16px;
-    width: 16px;
+.navbar > view > image {
+    height: 32rpx;
+    width: 32rpx;
 }
-.list{
-    padding-top:80rpx ;
+.list {
     height: 100%;
     box-sizing: border-box;
+}
+.p80 {
+    padding-top: 80rpx;
+}
+
+.list::-webkit-scrollbar {
+    position: relative;
+    z-index: 10;
+}
+
+.loading{
+    padding: 26rpx 0;
+    color: #999;
+    font-size: 24rpx;
+    /* display: none; */
+    background: #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading>image{
+    margin-left: 20rpx;
+    height: 32rpx;
+    width: 32rpx;
 }

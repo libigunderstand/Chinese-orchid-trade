@@ -1,5 +1,5 @@
 <view class="item">
-    <view class="left"><image src="{{item.ShopSmallIcon}}"> </image></view>
+    <view class="left"><image lazy-load src="{{item.ShopSmallIcon}}"> </image></view>
     <view class="right">
         <view class="r-top">{{item.ShopName}}</view>
         <view class="r-mid">

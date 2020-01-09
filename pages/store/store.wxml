@@ -14,9 +14,14 @@
                 <image></image>
             </view>
         </view>
-        <view wx:if="{{isShow}}"  class="mask"></view>
+        <view wx:if="{{isShowSelectBar}}" class="mask"></view>
     </view>
-    <scroll-view scroll-y wx:if="{{storeList}}" class="list" >
+    <scroll-view scroll-y wx:if="{{isGetData}}" bindscrolltolower="handlePullLoading" class="list">
+        <view class="p80"></view>
         <list-item wx:for="{{storeList}}" wx:key="{{item.ShopId}}" item="{{item}}"></list-item>
+        <view class="loading" >
+            <text>正在努力加载</text>
+            <image src="https://static.hmlan.com/h5/img/loading.gif"></image>
+        </view>
     </scroll-view>
 </view>

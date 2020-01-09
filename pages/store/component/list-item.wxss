@@ -1,39 +1,36 @@
 .item {
-    height: 190rpx;
+    height: 160rpx;
     padding: 20rpx;
     display: flex;
 }
 .left {
-    width: 190rpx;
+    width: 160rpx;
     height: 100%;
 }
 .left > image {
-    height: 190rpx;
+    height: 100%;
     width: 100%;
     display: block;
 }
 .right {
     flex: 1;
-    margin-left: 16rpx;
+    margin-left: 20rpx;
 }
 .r-top {
-    font-size: 16px;
+    font-size: 32rpx;
     color: #666;
 }
 .r-mid {
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 28rpx;
+    margin-top: 16rpx;
 }
 .r-mid > text {
     color: #95c519;
 }
-.r-mid > image {
-    height: 16px;
-}
 .r-bottom {
-    margin-top: 5px;
+    margin-top: 16rpx;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 28rpx;
     color: #999;
 }
 .b-left {
