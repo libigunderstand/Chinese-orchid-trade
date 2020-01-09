@@ -31,7 +31,6 @@ Component({
     handleFormateTime(time) {
       const timestamp = time.match(/\d+/)[0]
       const date = new Date(+timestamp)
-      
       return date.toLocaleString()
     }
   }

@@ -1,14 +1,13 @@
-<view class="item">
-    <view class="left"><image lazy-load src="{{item.ShopSmallIcon}}"> </image></view>
+<navigator class="item" open-type="navigate"   url="/pages/details/details?UserId={{item.UserId}}" >
+    <view class="left"><image lazy-load class="img" src="{{item.ShopSmallIcon}}"> </image></view>
     <view class="right">
         <view class="r-top">{{item.ShopName}}</view>
         <view class="r-mid">
-            <text>{{item.UserName}}</text>
+            <text class="txt">{{item.UserName}}</text>
         </view>
         <view class="r-bottom">
             <text class="b-left">{{item.UserProvince+item.UserCity}}</text>
             <text class="b-right">{{time}}</text>
         </view>
     </view>
-
-</view>
+</navigator>

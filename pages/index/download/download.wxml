@@ -1,0 +1,23 @@
+<view class="down-wrap">
+	<view class="hd">
+		<view class="logo">
+			<image src="http://static.hmlan.com/app/images/app.jpg"/>
+		</view>
+		<view class="top-right">
+			<text class="title">兰花交易网App</text>
+			<text class="title2">中国兰花第一门户网站</text>
+		</view>
+	</view>
+	<view class="bd-btn">
+		<a class="down-btn common">下载兰花交易网App</a>
+		<a class="open-btn common">打开兰花交易网App</a>
+	</view>
+	<view class="downloadbg">
+		<image src="http://static.hmlan.com/app/images/appdownload2.jpg"/>
+	</view>
+	<view class="ft">
+		<view>登录</view>
+		<view bindtap="toIndex">兰花交易网首页</view>
+		<view>下载客户端</view>
+	</view>
+</view>

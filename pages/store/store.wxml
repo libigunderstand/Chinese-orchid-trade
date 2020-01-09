@@ -1,27 +1,35 @@
 <view class="content">
     <view class="nav-wrapper">
         <view class="navbar">
-            <view data-type="Loc" bindtap="handleSlect">
-                <text>{{Loc}}</text>
-                <image></image>
+            <view data-type="Loc" bindtap="handleSelect" style="" animation="{{selectType==='Loc'?selectAnimation:null}}">
+                <text>{{selectArr.Loc[Loc].name}}</text>
+                <image src="/asset/imgs/down.png"></image>
             </view>
-            <view data-type="OrderStyle" bindtap="handleSlect">
-                <text>{{OrderStyle}}</text>
-                <image></image>
+            <view data-type="IsTui" bindtap="handleSelect" animation="{{selectType==='IsTui'?selectAnimation:null}}">
+                <text>{{selectArr.IsTui[IsTui].name}}</text>
+                <image src="/asset/imgs/down.png"></image>
             </view>
-            <view data-type="IsTui" bindtap="handleSlect">
-                <text>{{IsTui}}</text>
-                <image></image>
+            <view data-type="OrderStyle" bindtap="handleSelect" animation="{{selectType==='OrderStyle'?selectAnimation:null}}">
+                <text>{{selectArr.OrderStyle[OrderStyle].name}}</text>
+                <image src="/asset/imgs/down.png"></image>
             </view>
         </view>
-        <view wx:if="{{isShowSelectBar}}" class="mask"></view>
+        <block wx:if="{{isShowSelectBar}}">
+            <select-bar selectList="{{selectArr[selectType]}}" bindHandleSelect="handleSelectType"></select-bar>
+            <view class="mask" bindtap="handleTapMsk"></view>
+        </block>
     </view>
-    <scroll-view scroll-y wx:if="{{isGetData}}" bindscrolltolower="handlePullLoading" class="list">
-        <view class="p80"></view>
-        <list-item wx:for="{{storeList}}" wx:key="{{item.ShopId}}" item="{{item}}"></list-item>
-        <view class="loading" >
-            <text>正在努力加载</text>
-            <image src="https://static.hmlan.com/h5/img/loading.gif"></image>
+    <scroll-view scroll-y  bindscrolltolower="handlePullLoading" class="main">
+        <view class="list">
+            <list-item wx:for="{{storeList}}" wx:key="ShopId" item="{{item}}"></list-item>
+        </view>
+        <view class="loading" wx:if="{{!isNoData}}" >
+            <text>{{isNoMoreData?"已显示全部":"正在努力加载"}}</text>
+            <image wx:if="{{!isNoMoreData}}" src="https://static.hmlan.com/h5/img/loading.gif"></image>
+        </view>
+        <view wx:if="{{isNoData}}" class="no-data">
+            <image src="https://static.hmlan.com/h5/img/error.png" alt="" />
+                <view class="txt">没有找到相关店铺</view>
         </view>
     </scroll-view>
 </view>

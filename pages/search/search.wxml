@@ -1,0 +1,27 @@
+<!--pages/search/search.wxml-->
+<view class="top">
+  <view class="search">
+    <image src="/resources/sousuo.png" class="sousuo"></image>
+    <input placeholder="输入物品名、编号或卖家名" class="textInput"></input>
+  </view>
+  <view class="message">搜索</view>
+</view>
+<view class="tab">
+  <view class="tabList">
+    <view class="{{current? 'active' : 'tab-item'}}" bindtap="currentTab">搜物品</view>
+    <view class="{{!current? 'active' : 'tab-item'}}" bindtap="currentTab">搜店铺</view>
+  </view>
+  <view class="tip">热门搜索</view>
+  <view class="tabContent">
+    <view wx:if="{{current}}">
+      <view class="tagList" vx:for="{{tagList}}">
+        <view class="tag-item" wx:key="{{index}}">{{item}}</view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class="tagList" vx:for="{{tagList}}">
+        <view class="tag-item" wx:key="{{index}}">{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

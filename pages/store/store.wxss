@@ -26,23 +26,19 @@ page {
     align-items: center;
     justify-content: center;
     height: 100%;
+    background: #fff;
+    transition: all .4s;
 }
 
 .navbar > view > image {
     height: 32rpx;
     width: 32rpx;
 }
-.list {
+.main {
     height: 100%;
     box-sizing: border-box;
-}
-.p80 {
     padding-top: 80rpx;
-}
-
-.list::-webkit-scrollbar {
-    position: relative;
-    z-index: 10;
+    background-color: #ededed;
 }
 
 .loading{
@@ -59,4 +55,26 @@ page {
     margin-left: 20rpx;
     height: 32rpx;
     width: 32rpx;
+}
+
+.mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.no-data{
+    padding-top: 100rpx;
+}
+.no-data>image{
+    width: 400rpx;
+    height: 400rpx;
+    display: block;
+    margin: 0 auto;
+}
+.txt{
+    font-size: 28rpx;
+    color: #666;
+    text-align: center;
 }

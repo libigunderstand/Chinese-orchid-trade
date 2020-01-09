@@ -1,0 +1,3 @@
+<scroll-view  scroll-y="{{true}}" class="select-list">
+    <view class="item" bindtap="handleSelect"  wx:for="{{selectList}}" data-index="{{index}}" wx:key="val">{{item.name}}</view>
+</scroll-view>

@@ -2,12 +2,13 @@
     height: 160rpx;
     padding: 20rpx;
     display: flex;
+    background-color: #fff;
 }
 .left {
     width: 160rpx;
     height: 100%;
 }
-.left > image {
+.img{
     height: 100%;
     width: 100%;
     display: block;
@@ -24,7 +25,7 @@
     font-size: 28rpx;
     margin-top: 16rpx;
 }
-.r-mid > text {
+.txt{
     color: #95c519;
 }
 .r-bottom {
