@@ -1,0 +1,44 @@
+.item {
+    height: 190rpx;
+    padding: 20rpx;
+    display: flex;
+}
+.left {
+    width: 190rpx;
+    height: 100%;
+}
+.left > image {
+    height: 190rpx;
+    width: 100%;
+    display: block;
+}
+.right {
+    flex: 1;
+    margin-left: 16rpx;
+}
+.r-top {
+    font-size: 16px;
+    color: #666;
+}
+.r-mid {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.r-mid > text {
+    color: #95c519;
+}
+.r-mid > image {
+    height: 16px;
+}
+.r-bottom {
+    margin-top: 5px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #999;
+}
+.b-left {
+    float: left;
+}
+.b-right {
+    float: right;
+}
