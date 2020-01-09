@@ -14,13 +14,13 @@
   <view class="tip">热门搜索</view>
   <view class="tabContent">
     <view wx:if="{{current}}">
-      <view class="tagList" vx:for="{{tagList}}">
-        <view class="tag-item" wx:key="{{index}}">{{item}}</view>
+      <view class="tagList">
+        <view class="tag-item" wx:for="{{tagList}}" wx:key="index">{{item}}</view>
       </view>
     </view>
     <view wx:else>
-      <view class="tagList" vx:for="{{tagList}}">
-        <view class="tag-item" wx:key="{{index}}">{{item}}</view>
+      <view class="tagList">
+        <view class="tag-item" wx:for="{{tagList}}" wx:key="index">{{item}}</view>
       </view>
     </view>
   </view>

@@ -14,14 +14,15 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: 'http://m.hmlan.com/Auction/GetIndexListAuctionP?phoneType=h5&page=1',
+      url: 'http://m.hmlan.com/Search/HotSearchKey?sort=goods',
       header: {
         'content-type': 'application/json'
       },
       success: (res) => {
         this.setData({
-          tagList: res.data.IndexListAuctionP
+          tagList: res.data.KeyName,
         })
+        console.log(this.data.tagList )
       }
     })
   },
@@ -45,14 +46,13 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(this.data.tagList)
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log(this.data.tagList)
   },
 
   /**
