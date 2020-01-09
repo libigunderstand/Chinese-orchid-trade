@@ -82,6 +82,7 @@
 }
 .tabContent {
   padding: 20rpx 30rpx;
+  min-height: 256rpx;
 }
 .tagList {
   padding: 0 30rpx;
@@ -94,4 +95,59 @@
   float: left;
   margin: 0 20rpx 16rpx 0;
   font-size: 26rpx;
+}
+.gohome {
+  opacity: 0.8;
+  border: 1px solid #a8a7a7;
+  color: #7a7a7a;
+  border-radius: 50rpx;
+  bottom: 15%;
+  height: 92rpx;
+  line-height: 92rpx;
+  overflow: hidden;
+  padding-top: 8rpx;
+  position: fixed;
+  right: 10rpx;
+  text-align: center;
+  width: 100rpx;
+  z-index: 101;
+}
+.history {
+  width: 100%;
+  padding: 30rpx 30rpx 30rpx 40rpx;
+  color: #999;
+}
+.gohome image {
+  display: block;
+  margin: 10rpx auto;
+  width: 60rpx;
+  height: 66rpx;
+}
+.his-item {
+  display: flex;
+  height: 36rpx;
+  padding: 10rpx;
+}
+.his-item image {
+  width: 32rpx;
+  height: 36rpx;
+}
+
+.content {
+  width: 80%;
+  text-indent: 40rpx;
+  line-height: 36rpx;
+}
+.clearWrap {
+  margin: 0 auto;
+  width: 80%;
+  border-top: 1rpx solid #eee;
+  padding: 30rpx;
+}
+.clear {
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  border: 0;
+  background: #fff;
 }

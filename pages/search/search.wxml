@@ -2,9 +2,9 @@
 <view class="top">
   <view class="search">
     <image src="/resources/sousuo.png" class="sousuo"></image>
-    <input placeholder="输入物品名、编号或卖家名" class="textInput"></input>
+    <input placeholder="{{current?'输入物品名、编号或卖家名':'输入店铺名或卖家名'}}" class="textInput" bindinput="formValue" value="{{value}}"></input>
   </view>
-  <view class="message">搜索</view>
+  <view class="message" bindtap="inputValue">搜索</view>
 </view>
 <view class="tab">
   <view class="tabList">
@@ -13,15 +13,25 @@
   </view>
   <view class="tip">热门搜索</view>
   <view class="tabContent">
-    <view wx:if="{{current}}">
-      <view class="tagList">
-        <view class="tag-item" wx:for="{{tagList}}" wx:key="index">{{item}}</view>
-      </view>
+    <view class="tagList" wx:if="{{current}}">
+      <view class="tag-item" wx:for="{{tagList}}" wx:key="index">{{item}}</view>
     </view>
-    <view wx:else>
-      <view class="tagList">
-        <view class="tag-item" wx:for="{{tagList}}" wx:key="index">{{item}}</view>
-      </view>
+    <view class="tagList" wx:else>
+      <view class="tag-item" wx:for="{{tagList}}" wx:key="index">{{item}}</view>
     </view>
   </view>
+</view>
+<view class="history">
+  <view class="his-item" wx:for="{{history}}" wx:key="index">
+    <image src="/resources/time.png" class="left"/>
+    <text class="content">{{item}}</text>
+    <image src="/resources/delete.png" id="{{index}}" class="right" bindtap="handleDelete"/>
+  </view>
+</view>
+<view class="clearWrap" wx:if="{{history.length !== 0}}">
+  <view class="clear" bindtap="clearHis">清空历史记录</view>
+</view>
+<view wx:else></view>
+<view class="gohome" bindtap="toHome">
+  <image src="/resources/gohome.png"></image>
 </view>

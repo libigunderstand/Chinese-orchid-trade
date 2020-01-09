@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/search/search",
     "pages/index/index",
     "pages/attention/attention",
     "pages/store/store",
     "pages/forum/forum",
     "pages/mine/mine",
-    "pages/index/download/download",
-    "pages/search/search"
+    "pages/index/download/download"
   ],
   "window": {
     "backgroundTextStyle": "light",

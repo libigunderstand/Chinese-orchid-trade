@@ -1,18 +1,14 @@
 // pages/search/search.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     current: true,
-    tagList: {}
+    tagList: {},
+    value: '',
+    history: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    this.initHistory()
     wx.request({
       url: 'http://m.hmlan.com/Search/HotSearchKey?sort=goods',
       header: {
@@ -22,10 +18,10 @@ Page({
         this.setData({
           tagList: res.data.KeyName,
         })
-        console.log(this.data.tagList )
       }
     })
   },
+  //点击tab标签切换时请求数据
   currentTab() {
     this.setData({
       current: !this.data.current
@@ -42,51 +38,60 @@ Page({
       }
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  //页面加载时获取本地历史记录
+  initHistory() {
+    this.setData({
+      history: wx.getStorageSync('serHistory') || []
+    })
+  },
+  //点击搜索按钮提交
+  inputValue() {
+    if(this.data.value !== ''){
+      let history = this.data.history
+      history.push(this.data.value)
+      wx.setStorageSync('serHistory', history)
+      this.setData({
+        value: ''
+      })
+    }else {
+      wx.showToast({
+        title: '请输入搜索关键字',
+        icon: 'none',
+        duration: 1500
+      })
+    }
+  },
+  //获取input框value
+  formValue(e) {
+    this.setData({
+      value: e.detail.value
+    })
+  },
+  //删除历史记录
+  handleDelete(e) {
+    let arr = this.data.history
+    arr.splice(e.currentTarget.id,1)
+    this.setData({
+      history: arr
+    })
+    wx:wx.setStorageSync('serHistory', this.data.history)
+  },
+  //清空所有历史记录
+  clearHis() {
+    this.setData({
+      history: []
+    })
+    console.log(this.data.history)
+    wx.clearStorage()
+  },
+  toHome() {
+   wx.switchTab({
+     url: '/pages/index/index',
+   })
+  },
   onReady: function () {
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-    console.log(this.data.tagList)
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
   }
 })
