@@ -26,9 +26,7 @@ Page({
    */
   toIndex: () => {
     console.log(0)
-    wx.navigateBack({
-      
-    })()
+    wx.navigateBack({})
   },
   onShow: function () {
     
