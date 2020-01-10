@@ -1,0 +1,28 @@
+<!--pages/index/message/message.wxml-->
+<view class="messagePage">
+  <view class="top">
+    <view class="tabWrap">
+      <view class="{{tabId===0?'tab-active':'tab-item'}}" id="0" bindtap="selectTab">全部</view>
+      <view class="{{tabId===1?'tab-active':'tab-item'}}" id="1" bindtap="selectTab">未读</view>
+      <view class="{{tabId===2?'tab-active':'tab-item'}}" id="2" bindtap="selectTab">已发送</view>
+    </view>
+    <view class="back-wrap" bindtap="back">
+      <image src="/resources/back.png" class="back"/>
+    </view>
+  </view>
+  <view class="searchWrap">
+    <view class="text" bindtap="toInput" style="{{show?'display:flex':'display:none'}}">
+      <image src="/resources/sousuo.png" class="sousuo"></image>
+      <text>搜索</text>
+    </view>
+    <view class="search-input" style="{{!show?'display:flex':'display:none'}}">
+      <image src="/resources/sousuo.png" class="sousuo"></image>
+      <input placeholder="搜索" focus="{{focusAuto}}" bindblur="blur"/>
+    </view>
+    <view class="tosearch" style="{{!show?'display:block':'display:none'}}">提交</view>
+  </view>
+  <view class="mesList">暂无任何消息！</view>
+  <view class="gohome" bindtap="toHome">
+    <image src="https://static.hmlan.com/images/new_icon/common/fixed/faxin.png"></image>
+  </view>
+</view>

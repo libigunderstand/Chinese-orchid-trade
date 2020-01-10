@@ -4,7 +4,8 @@ Page({
    */
   data: {
     showList: {},
-    pageNo: 1
+    pageNo: 1,
+    bottom: 0
   },
   /**
    * 生命周期函数--监听页面加载
@@ -41,12 +42,18 @@ Page({
         'content-type': 'application/json'
       },
       success: (res) => {
-        this.setData({
-          showList: [
-            ...this.data.showList,
-            ...res.data.IndexListAuctionP
-          ]
-        })
+        if(res.data.IndexListAuctionP !== []) {
+          this.setData({
+            showList: [
+              ...this.data.showList,
+              ...res.data.IndexListAuctionP
+            ]
+          })
+        }else {
+          this.setData({
+            bottom: 1
+          })
+        }
         wx.hideLoading()
       }
     })

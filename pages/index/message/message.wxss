@@ -1,0 +1,129 @@
+/* pages/index/message/message.wxss */
+.messagePage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.top {
+  height: 88rpx;
+  background: #95c519;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.tabWrap {
+  height: 54rpx;
+  width: 50%;
+  padding: 0;
+  margin: 16rpx auto 14rpx;
+  border: 1px solid #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  display: flex;
+}
+.tab-item {
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 500;
+  border-right: 1px solid #fff;
+  width: 33%;
+  text-align: center;
+  line-height: 46rpx;
+}
+.tab-active {
+  color: #95c519;
+  font-size: 32rpx;
+  font-weight: 500;
+  border-right: 1px solid #fff;
+  width: 33%;
+  text-align: center;
+  line-height: 46rpx;
+  background: #fff;
+}
+.back-wrap {
+  width: 100rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.back {
+  display: block;
+  margin: 16rpx auto 0;
+  width: 56rpx;
+  height: 50rpx;
+}
+.searchWrap {
+  height: 88rpx;
+  margin-top: 84rpx;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx;
+  background-color: #EFEFF4;
+}
+.text {
+  position: relative;
+  padding: 0 60rpx;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.text text {
+  font-size: 28rpx;
+  color: #999;
+}
+.sousuo {
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+.search-input {
+  position: relative;
+  padding-left: 20rpx;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+.tosearch {
+  margin-left: 20rpx;
+  color: #95c519;
+  width: 100rpx;
+  line-height: 46rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.mesList {
+  padding: 60rpx;
+  text-align: center;
+  color: #999;
+}
+.gohome {
+  opacity: 0.8;
+  color: #7a7a7a;
+  border-radius: 50rpx;
+  bottom: 15%;
+  height: 100rpx;
+  overflow: hidden;
+  position: fixed;
+  right: 10rpx;
+  text-align: center;
+  width: 100rpx;
+  z-index: 101;
+}
+.gohome image {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+}

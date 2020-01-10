@@ -1,4 +1,4 @@
-<!--pages/search/search.wxml-->
+  <!--pages/search/search.wxml-->
 <view class="top">
   <view class="search">
     <image src="/resources/sousuo.png" class="sousuo"></image>

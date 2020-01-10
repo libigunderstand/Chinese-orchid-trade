@@ -7,7 +7,8 @@
     "pages/mine/mine",
     "pages/index/download/download",
     "pages/search/search",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/index/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",

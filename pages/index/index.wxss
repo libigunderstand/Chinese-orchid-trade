@@ -185,6 +185,7 @@ swiper-item  > image {
   flex-direction: column;
 }
 .introduce_ {
+  font-size: 32rpx;
   margin: 16rpx 16rpx 0 28rpx;
 }
 .t1 {
@@ -275,4 +276,11 @@ swiper-item  > image {
 }
 .price{
   font-size: 20rpx;
+}
+.bottom {
+  margin: 0 auto;
+  font-size: 28rpx;
+  text-align: center;
+  background: #eee;
+  padding-bottom: 14rpx;
 }
