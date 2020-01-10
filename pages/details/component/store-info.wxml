@@ -1,0 +1,45 @@
+<navigator open-type="navigate" url="/pages/storeInfo/storeInfo?UserInfo={{ShopItem.BaseUser.UserId}}" class="user-content">
+    <view class="bg"></view>
+    <view style="height:25rpx"></view>
+    <view class="wrapper">
+        <view class="user">
+            <view class="left">
+                <image class="photo" src="{{ShopItem.ShopItem.ShopSmallIcon}}"></image>
+            </view>
+            <view class="center">
+                <view class="title">{{ShopItem.ShopItem.ShopName}}</view>
+                <view class="name">{{ShopItem.BaseUser.UserName}}</view>
+                <view class="address">
+                    {{ShopItem.BaseUser.UserProvince+ShopItem.BaseUser.UserCity+ShopItem.BaseUser.UserArea}}
+                </view>
+                <view class="other">
+                    <view wx:if="{{ShopItem.BaseUser.IsMoblieRen}}">
+                        <icon size="12" type="success"></icon>
+                        手机号码认证
+                    </view>
+                    <view wx:if="{{ShopItem.BaseUser.IsIdCardRen}}">
+                        <icon size="12" type="success"></icon>
+                        个人认证
+                    </view>
+                </view>
+            </view>
+            <view class="right">
+                <view class="btn">关注</view>
+            </view>
+        </view>
+        <view class="bottom">
+            <view class="b-item">
+                <view class="bi-info">{{UserRegtime}}</view>
+                <view class="bi-title">注册时间</view>
+            </view>
+            <view class="b-item">
+                <view class="bi-info">{{RateInfo.sellerRatePercentStr}}</view>
+                <view class="bi-title">好评率</view>
+            </view>
+            <view class="b-item">
+                <view class="bi-info">{{ShopItem.AttentionCount.FansCount}}</view>
+                <view class="bi-title">粉丝数</view>
+            </view>
+        </view>
+    </view>
+</navigator>

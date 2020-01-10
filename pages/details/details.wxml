@@ -1,2 +1,33 @@
-<!--pages/details/details.wxml-->
-<text>pages/details/details.wxml</text>
+<view class="content">
+    <store-info wx:if="{{ShopItem}}" ShopItem="{{ShopItem}}" RateInfo="{{RateInfo}}"></store-info>
+    <view class="list-nav">
+        <view class="select-item {{selectIndex==0?'selected':null}}" bindtap="handleItemSelect" data-type="OrderStyle" data-index="0" data-value="2">
+            最新上传
+        </view>
+        <view class="select-item {{selectIndex==1?'selected':null}}" bindtap="handleItemSelect" data-type="" data-index="1" data-value="">
+            即将结拍
+        </view>
+        <view class="select-item {{selectIndex==2?'selected':null}}" bindtap="handleItemSelect" data-type="OrderStyle" data-index="2" data-value="5">
+            热门拍品
+        </view>
+        <view class="select-item {{selectIndex==3?'selected':null}}" bindtap="handleItemSelect" data-type="Tui" data-index="3" data-value="true">
+            推荐拍品
+        </view>
+    </view>
+    <view class="list-wrapper">
+        <navigator class="list-item" wx:for="{{list}}">
+            <image src="{{item.SmallSrc}}"  lazy-load="{{true}}"></image>
+            <view class="item-info">
+                <view class="item-title">{{item.AucTitle}}</view>
+                <view class="item-price">￥{{item.TopPrice}}</view>
+                <view class="last-time">24小时</view>
+                <view class="count">
+                    <view class="c1">{{item.PriceNum}}</view>
+                    <view class="c2">次出价</view>
+
+                </view>
+
+            </view>
+        </navigator>
+    </view>
+</view>
