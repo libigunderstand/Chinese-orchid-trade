@@ -1,38 +1,80 @@
-page{
+page {
     height: 100%;
 }
-.content{
+.content {
     height: 100%;
     position: relative;
 }
-.nav-wrapper{
+.nav-wrapper {
     position: fixed;
     width: 100%;
+    z-index: 9;
 }
-.navbar{
+.navbar {
     height: 80rpx;
     background: #fff;
     border-bottom: 1rpx solid #eeeeee;
     display: flex;
     box-sizing: border-box;
 }
-.navbar>view{
+.navbar > view {
     width: 33.33%;
     border-right: 1rpx solid #eee;
-    font-size: 15px;
+    font-size: 30rpx;
     color: #666;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+    background: #fff;
+    transition: all .4s;
 }
 
-.navbar>view>image{
-    height: 16px;
-    width: 16px;
+.navbar > view > image {
+    height: 32rpx;
+    width: 32rpx;
 }
-.list{
-    padding-top:80rpx ;
+.main {
     height: 100%;
     box-sizing: border-box;
+    padding-top: 80rpx;
+    background-color: #ededed;
+}
+
+.loading{
+    padding: 26rpx 0;
+    color: #999;
+    font-size: 24rpx;
+    /* display: none; */
+    background: #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading>image{
+    margin-left: 20rpx;
+    height: 32rpx;
+    width: 32rpx;
+}
+
+.mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.no-data{
+    padding-top: 100rpx;
+}
+.no-data>image{
+    width: 400rpx;
+    height: 400rpx;
+    display: block;
+    margin: 0 auto;
+}
+.txt{
+    font-size: 28rpx;
+    color: #666;
+    text-align: center;
 }
