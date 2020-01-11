@@ -1,1 +1,82 @@
-/* pages/details/details.wxss */
+page {
+    background-color: #ededed;
+}
+.list-nav {
+    display: flex;
+    height: 80rpx;
+    background: #fff;
+}
+.select-item {
+    flex: 1;
+    font-size: 32rpx;
+    color: #666;
+    line-height: 80rpx;
+    text-align: center;
+}
+.selected {
+    color: #ff4e00;
+    border-bottom: 4rpx solid #ff4e00;
+}
+
+.list-wrapper {
+    padding: 20rpx;
+    overflow: hidden;
+}
+.list-item {
+    position: relative;
+    width: 344rpx;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 12rpx;
+    margin-bottom: 20rpx;
+}
+.list-item:nth-child(odd) {
+    float: left;
+}
+.list-item:nth-child(even) {
+    float: right;
+}
+.list-item > image {
+    width: 370rpx;
+    height: 370rpx;
+    display: block;
+}
+.item-info {
+    padding: 14rpx 18rpx 16rpx;
+    position: relative;
+}
+.item-title {
+    color: #666;
+    font-size: 32rpx;
+    margin-bottom: 8rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.item-price {
+    font-size: 28rpx;
+    color: #f60000;
+    margin-bottom: 8rpx;
+}
+.last-time {
+    font-size: 28rpx;
+    color: #999;
+}
+.count {
+    position: absolute;
+    right:18rpx;
+    bottom:16rpx;
+    width: 90rpx;
+    padding: 6rpx 10rpx;
+    background-color: #fcf6e2;
+}
+.c1 {
+    font-size: 36rpx;
+    color: #887942;
+    text-align: center;
+}
+.c2 {
+    font-size: 24rpx;
+    color: #887942;
+    text-align: center;
+}

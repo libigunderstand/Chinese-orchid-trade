@@ -8,7 +8,8 @@
     "pages/index/download/download",
     "pages/search/search",
     "pages/details/details",
-    "pages/index/message/message"
+    "pages/index/message/message",
+    "pages/storeInfo/storeInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
