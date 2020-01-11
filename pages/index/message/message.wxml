@@ -22,7 +22,7 @@
     <view class="tosearch" style="{{!show?'display:block':'display:none'}}">提交</view>
   </view>
   <view class="mesList">暂无任何消息！</view>
-  <view class="gohome" bindtap="toHome">
+  <view class="gohome">
     <image src="https://static.hmlan.com/images/new_icon/common/fixed/faxin.png"></image>
   </view>
 </view>

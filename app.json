@@ -9,7 +9,8 @@
     "pages/search/search",
     "pages/details/details",
     "pages/index/message/message",
-    "pages/storeInfo/storeInfo"
+    "pages/storeInfo/storeInfo",
+    "pages/goodsdetail/goodsdetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

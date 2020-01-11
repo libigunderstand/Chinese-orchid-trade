@@ -284,7 +284,7 @@
     </view>
     <view class="panel">
       <view class="panel-list">
-        <view class="viewGoods" wx:for="{{showList}}" wx:key="AucId">
+        <view class="viewGoods" wx:for="{{showList}}" wx:key="AucId" data-id="{{item.AucId}}" bindtap="toDetail">
           <view class="panel-wrapper">
             <view class="panel-tu">
               <image src="{{item.MidSrc}}"></image>

@@ -1,4 +1,9 @@
 /* pages/search/search.wxss */
+.ser-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%
+}
 .top {
   position: fixed;
   height: 86rpx;
@@ -150,4 +155,35 @@
   color: #999;
   border: 0;
   background: #fff;
+}
+.ser-tip {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding-left: 30rpx;
+  background: #fff;
+  min-height: 60%;
+}
+.title {
+  display: block;
+  color: #097ad9;
+  padding: 9px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.title1 {
+  color: #666;
+  padding: 9px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 28rpx;
+  display: flex;
+  justify-items: center;
+}
+.sou-img {
+  width: 32rpx;
+  height: 36rpx;
+  margin-right: 8rpx;
 }

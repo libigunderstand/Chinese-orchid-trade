@@ -1,0 +1,46 @@
+<!--pages/goodsdetail/goodsdetail.wxml-->
+<view class="detailWrap">
+  <view class="foot">
+    <view class="buttons">
+      <view class="btn-item" bindtap="toHome">
+        <icon class="iconfont iconfanhuishouye" style="font-size: 42rpx;"></icon>
+        <text>首页</text>
+      </view>
+      <view class="btn-item" bindtap="like">
+        <icon class="iconfont iconshoucang4" style="font-size: 48rpx;" wx:if="{{!iflike}}"></icon>
+        <icon class="iconfont iconfavor-active" style="font-size: 48rpx;" wx:else></icon>
+        <text>{{!iflike?'收藏':'取消收藏'}}</text>
+      </view>
+      <view class="btn-item">
+        <icon class="iconfont iconkefu" style="font-size: 44rpx;"></icon>
+        <text>客服</text>
+      </view>
+    </view>
+    <view class="buy">
+      <view class="gobuy">一口价购买</view>
+      <view class="talkbuy">提交竞价</view>
+    </view>
+  </view>
+  <view class="slider">
+    <swiper bindchange="current">
+      <swiper-item wx:for="{{totaldata.ListPic}}" wx:key="PicId">
+        <image src="{{item.MidSrc}}"></image>
+      </swiper-item>
+    </swiper>
+    <view class="slider-num">
+      <text>{{currentPoint}}</text>
+      /
+      <text>{{totaldata.ListPic.length}}</text>
+    </view>
+  </view>
+  <view class="top">
+    <view class="backWrap" bindtap="back">
+      <icon class="iconfont iconhuise" style="color: #fff;margin:-6rpx 0 0 -6rpx;"></icon>
+    </view>
+    <view class="msgWrap" bindtap="toMsg">
+      <navigator url="/pages/index/message/message">
+        <icon class="iconfont iconxinxi" style="color: #fff;font-size:46rpx;"></icon>
+      </navigator>
+    </view>
+  </view>
+</view>

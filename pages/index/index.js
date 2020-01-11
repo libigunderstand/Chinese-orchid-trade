@@ -15,6 +15,11 @@ Page({
       url: '/pages/search/search',
     })
   },
+  toDetail(e) {
+    wx.navigateTo({
+      url: `/pages/goodsdetail/goodsdetail?id=${e.currentTarget.dataset.id}`,
+    })
+  },
   onLoad: function (options) {
     wx.request({
       url: `http://m.hmlan.com/Auction/GetIndexListAuctionP?phoneType=h5&page=${this.data.pageNo}`,

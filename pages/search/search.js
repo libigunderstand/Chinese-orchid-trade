@@ -5,7 +5,8 @@ Page({
     current: true,
     tagList: {},
     value: '',
-    history: []
+    history: [],
+    keylist: []
   },
   onLoad: function (options) {
     this.initHistory()
@@ -66,6 +67,17 @@ Page({
     this.setData({
       value: e.detail.value
     })
+    wx.request({
+      url: `http://m.hmlan.com/Search/Association?sort=goods&key=${e.detail.value}`,
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        this.setData({
+          keylist: res.data.KeyName
+        })
+      }
+    })
   },
   //删除历史记录
   handleDelete(e) {
@@ -74,15 +86,21 @@ Page({
     this.setData({
       history: arr
     })
-    wx:wx.setStorageSync('serHistory', this.data.history)
+    wx.setStorageSync('serHistory', this.data.history)
   },
   //清空所有历史记录
   clearHis() {
     this.setData({
       history: []
     })
-    console.log(this.data.history)
     wx.clearStorage()
+  },
+  //点击热门搜索
+  toStorage(e) {
+    let history = this.data.history
+    history.push(e.target.dataset.name)
+    wx.setStorageSync('serHistory', history)
+    console.log(e.target.dataset.name)
   },
   toHome() {
    wx.switchTab({
