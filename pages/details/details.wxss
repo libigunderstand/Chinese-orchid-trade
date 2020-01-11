@@ -1,10 +1,21 @@
 page {
     background-color: #ededed;
 }
+.content{
+    padding-bottom: 110rpx;
+}
 .list-nav {
     display: flex;
     height: 80rpx;
     background: #fff;
+    width: 100%;
+    position: absolute;
+    top: 361rpx;
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    z-index: 99;
 }
 .select-item {
     flex: 1;

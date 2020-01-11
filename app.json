@@ -1,15 +1,16 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/storeInfo/storeInfo",
+    "pages/storeComment/storeComment",
     "pages/details/details",
     "pages/store/store",
-    "pages/index/index",
     "pages/attention/attention",
     "pages/forum/forum",
     "pages/mine/mine",
     "pages/index/download/download",
     "pages/search/search",
-    "pages/index/message/message",
-    "pages/storeInfo/storeInfo"
+    "pages/index/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",

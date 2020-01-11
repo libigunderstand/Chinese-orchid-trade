@@ -1,0 +1,63 @@
+<view class="content">
+    <view class="userInfo" wx:if="{{RaBisnesType==2}}">
+        <view class="ui-item">
+            <view>卖家信用: </view>
+            <view>
+                好评率：
+                <text class="mark">{{userInfo.sellerRatePercentStr}}</text>
+            </view>
+        </view>
+        <view class="ui-item">
+            <view>好评 {{userInfo.sFTAllG}}</view>
+            <view>好评 {{userInfo.sFTAllN}}</view>
+            <view>好评 {{userInfo.sFTAllB}}</view>
+        </view>
+    </view>
+    <view class="userInfo" wx:else>
+        <view class="ui-item">
+            <view>买家信用: </view>
+            <view>
+                好评率：
+                <text class="mark">{{userInfo.buyerRatePercentStr}}</text>
+            </view>
+        </view>
+        <view class="ui-item">
+            <view>好评 {{userInfo.bFTAllG}}</view>
+            <view>中评 {{userInfo.bFTAllN}}</view>
+            <view>差评 {{userInfo.bFTAllB}}</view>
+        </view>
+    </view>
+    <view class="nav-bar">
+        <view class="nb-wrapper">
+            <view bindtap="handleSelectType" data-RaType="0" class="nb-item {{selectTypeIndex==0?'action':null}}">
+                所有评论
+            </view>
+            <view bindtap="handleSelectType" data-RaType="1" class=" nb-item {{selectTypeIndex==1?'action':null}}">
+                查看好评
+            </view>
+            <view bindtap="handleSelectType" data-RaType="2" class="nb-item {{selectTypeIndex==2?'action':null}}">
+                查看中评
+            </view>
+            <view bindtap="handleSelectType" data-RaType="3" class=" nb-item {{selectTypeIndex==3?'action':null}}">
+                查看差评
+            </view>
+        </view>
+    </view>
+    <view class="list">
+        <view class="list-item" wx:for="{{commentList}}" wx:key="AucId">
+            <view class="li-name">
+                <text class="ff w70">{{item.Seller}}</text>
+                <icon class="fr"></icon>
+            </view>
+            <view class="li-title">
+                <view class="title w70 ff">{{item.AucTitle}}</view>
+                <view class="mark fr">{{item.AucPrice}}元</view>
+            </view>
+            <view class="li-content">
+                <view class="content">{{item.RaContent}}</view>
+            </view>
+            <view class="li-time">2020-01-02 12:03</view>
+        </view>
+    </view>
+    <loading isNoMoreData="{{isNoMoreData}}" isNoData="{{isNoData}}"></loading>
+</view>

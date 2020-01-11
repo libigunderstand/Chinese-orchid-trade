@@ -1,4 +1,4 @@
-<navigator open-type="navigate" url="/pages/storeInfo/storeInfo?UserInfo={{ShopItem.BaseUser.UserId}}" class="user-content">
+<navigator open-type="navigate" url="/pages/storeInfo/storeInfo?UserId={{ShopItem.BaseUser.UserId}}" class="user-content">
     <view class="bg"></view>
     <view style="height:25rpx"></view>
     <view class="wrapper">

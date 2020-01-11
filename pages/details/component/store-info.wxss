@@ -1,6 +1,7 @@
 .user-content {
     position: relative;
     background-color: #fff;
+    padding-bottom: 80rpx;
 }
 .bg {
     position: absolute;

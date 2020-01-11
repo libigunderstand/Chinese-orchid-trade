@@ -13,7 +13,10 @@ Page({
         selectType: null,
         isReachBottomLoadData: false,
         isNoMoreData: false,
-        isNoData: false
+        isNoData: false,
+        UserId: null,
+        isFixed: false
+
     },
 
     // 加载数据
@@ -24,7 +27,7 @@ Page({
             data: {
                 page: that.data.page,
                 pageSize: that.data.pageSize,
-                SellerId: that.static.UserId,
+                SellerId: that.data.UserId,
                 ...opts
             },
             success(res) {
@@ -78,12 +81,11 @@ Page({
      */
     onLoad: function(options) {
         const that = this;
-        const UserId="16ffaf478ab79d5f22bff313bbaecf55"
-        that.static={};
-        that.static.UserId=UserId;
-        wx.setNavigationBarTitle({
-            title:options.ShopName
-        })
+        const UserId = options.UserId;
+        that.static = {};
+        that.setData({
+            UserId
+        });
         wx.hideTabBar();
         wx.showToast({
             title: "数据加载中...",
@@ -94,6 +96,9 @@ Page({
             success(res) {
                 that.setData({
                     ShopItem: res.data
+                });
+                wx.setNavigationBarTitle({
+                    title: res.data.ShopItem.ShopName
                 });
             }
         });
@@ -106,6 +111,29 @@ Page({
             }
         });
         that.handleLoadList();
+    },
+    onReady() {
+        // const query = wx.createSelectorQuery();
+        // query.select(".list-nav").boundingClientRect(function(res) {
+        //     console.log(res);
+        // });
+        // query.exec();
+        // const that = this;
+        // wx.createIntersectionObserver(this)
+        //     .relativeToViewport({ top: -40 })
+        //     .observe(".list-nav", (e) => {
+        //         that.setData({
+        //             isFixed: e.intersectionRatio <0.01
+        //         });
+        //     });
+    },
+
+    onPageScroll(e) {
+        if (e.scrollTop > 215 !== this.data.isFixed) {
+            this.setData({
+                isFixed:!this.data.isFixed
+            })
+        }
     },
     onReachBottom: function() {
         const that = this;
