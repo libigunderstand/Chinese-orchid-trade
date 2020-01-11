@@ -1,0 +1,23 @@
+<view class="bar">
+    <view class="options">
+        <navigator class="item" open-type="switchTab" url="/pages/index/index">
+            <image class="ic" src="/asset/imgs/cc-home.png" mode="aspectFit"></image>
+            <view class="txt">首页</view>
+        </navigator>
+        <navigator class="item" wx:if="{{type==='intro'}}" open-type="navigate" url="/pages/storeInfo/storeInfo?UserId={{UserId}}">
+            <image class="ic" src="/asset/imgs/intro.png" mode="aspectFit"></image>
+            <view class="txt">简历</view>
+        </navigator>
+        <navigator class="item" wx:if="{{type==='store'}}" open-type="navigate" url="/pages/details/details?UserId={{UserId}}">
+            <image class="ic" src="/asset/imgs/store.png" mode="aspectFit"></image>
+            <view class="txt">店铺</view>
+        </navigator>
+        <navigator class="item" open-type="navigate" url="/pages/index/index">
+            <image class="ic" src="/asset/imgs/trust.png" mode="aspectFit"></image>
+            <view class="txt">信用</view>
+        </navigator>
+    </view>
+    <view class="btn-wrapper">
+        <view class="btn">联系卖家</view>
+    </view>
+</view>

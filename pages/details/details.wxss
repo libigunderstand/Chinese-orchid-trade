@@ -21,6 +21,7 @@ page {
 .list-wrapper {
     padding: 20rpx;
     overflow: hidden;
+    padding-bottom: 0;
 }
 .list-item {
     position: relative;
