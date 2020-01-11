@@ -1,6 +1,7 @@
 <view class="content">
+    <store-tab-bar UserId="{{UserId}}"></store-tab-bar>
     <store-info wx:if="{{ShopItem}}" ShopItem="{{ShopItem}}" RateInfo="{{RateInfo}}"></store-info>
-    <view class="list-nav">
+    <view class="list-nav {{isFixed?'fixed':null}}" >
         <view class="select-item {{selectIndex==0?'selected':null}}" bindtap="handleItemSelect" data-type="OrderStyle" data-index="0" data-value="2">
             最新上传
         </view>
@@ -15,8 +16,8 @@
         </view>
     </view>
     <view class="list-wrapper">
-        <navigator class="list-item" wx:for="{{list}}">
-            <image src="{{item.SmallSrc}}"  lazy-load="{{true}}"></image>
+        <navigator class="list-item" wx:for="{{list}}" wx:key="AucHits" url="/pages/storeInfo/storeInfo?UserId={{item.UserId}}">
+            <image src="{{item.SmallSrc}}" lazy-load="{{true}}"></image>
             <view class="item-info">
                 <view class="item-title">{{item.AucTitle}}</view>
                 <view class="item-price">￥{{item.TopPrice}}</view>
@@ -24,10 +25,9 @@
                 <view class="count">
                     <view class="c1">{{item.PriceNum}}</view>
                     <view class="c2">次出价</view>
-
                 </view>
-
             </view>
         </navigator>
     </view>
+    <loading isNoMoreData="{{isNoMoreData}}"></loading>
 </view>

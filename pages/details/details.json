@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "store-info":"./component/store-info"
+    "store-info":"./component/store-info",
+    "loading":"/component/loading",
+    "store-tab-bar":"/component/store-tab-bar"
   }
 }

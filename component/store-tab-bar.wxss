@@ -1,0 +1,46 @@
+.bar{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 110rpx;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+}
+.options{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.item{
+    flex: 1;
+}
+.ic{
+    display: block;
+    margin: 0 auto;
+    width: 48rpx;
+    height: 48rpx;
+}
+.txt{
+    font-size: 24rpx;
+    color: #666;
+    text-align: center;
+}
+.btn-wrapper{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    width: 74%;
+    height: 80rpx;
+    border-radius: 50rpx;
+    background-color: #95c519;
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+}

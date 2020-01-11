@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "list-item":"./component/list-item",
-    "select-bar":"./component/select-bar"
+    "select-bar":"./component/select-bar",
+    "loading":"/component/loading"
   }
 }

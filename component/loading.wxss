@@ -1,0 +1,37 @@
+.loading {
+    padding: 26rpx 0;
+    color: #999;
+    font-size: 24rpx;
+    /* display: none; */
+    background: #ededed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading > image {
+    margin-left: 20rpx;
+    height: 32rpx;
+    width: 32rpx;
+}
+
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.no-data {
+    padding-top: 100rpx;
+}
+.no-data > image {
+    width: 400rpx;
+    height: 400rpx;
+    display: block;
+    margin: 0 auto;
+}
+.txt {
+    font-size: 28rpx;
+    color: #666;
+    text-align: center;
+}

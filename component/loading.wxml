@@ -1,0 +1,8 @@
+<view class="loading" wx:if="{{!isNoData}}">
+    <text>{{isNoMoreData?"已显示全部":"正在努力加载"}}</text>
+    <image wx:if="{{!isNoMoreData}}" src="https://static.hmlan.com/h5/img/loading.gif"></image>
+</view>
+<view wx:if="{{isNoData}}" class="no-data">
+    <image src="https://static.hmlan.com/h5/img/error.png" alt="" />
+    <view class="txt">没有找到相关店铺</view>
+</view>

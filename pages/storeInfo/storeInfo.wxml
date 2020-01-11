@@ -1,2 +1,119 @@
-<!--pages/storeInfo/storeInfo.wxml-->
-<text>pages/storeInfo/storeInfo.wxml</text>
+<view class="content">
+    <store-tab-bar type="store" UserId="{{UserId}}"></store-tab-bar>
+    <view class="user-info">
+        <view class="user">
+            <view class="left">
+                <image class="photo" src="{{storeData.ShopItem.ShopSmallIcon}}"></image>
+            </view>
+            <view class="center">
+                <view class="title">{{storeData.ShopItem.ShopName}}</view>
+                <view class="name">{{storeData.BaseUser.UserName}}</view>
+                <view class="other">
+                    <view wx:if="{{storeData.BaseUser.IsMoblieRen}}">
+                        <icon size="12" type="success"></icon>
+                        手机号码认证
+                    </view>
+                    <view wx:if="{{storeData.BaseUser.IsIdCardRen}}">
+                        <icon size="12" type="success"></icon>
+                        个人认证
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="btns">
+            <view class="btn1">个人主页</view>
+            <view class="btn1">关注卖家</view>
+        </view>
+        <view class="section">
+            <view class="item">
+                <view class="h44">所在地</view>
+                <view>
+                    {{storeData.BaseUser.UserProvince+storeData.BaseUser.UserCity+storeData.BaseUser.UserArea}}
+                </view>
+            </view>
+            <view class="item">
+                <view class="h44">注册时间</view>
+                <view>{{storeData.BaseUser.UserRegtime}}</view>
+            </view>
+            <view class="item">
+                <view class="h44">上次登录</view>
+                <view>{{storeData.BaseUser.UserLasttime}}</view>
+            </view>
+        </view>
+        <view class="section">
+            <view class="item">
+                <view class="h44">店铺指数</view>
+            </view>
+            <view class="item">
+                <view class="block">
+                    <view>
+                        该卖家3个月内共卖出的订单数：
+                        <text class="mark">646</text>
+                        笔
+                    </view>
+                    <view>
+                        该卖家1年内共卖出的订单数：
+                        <text class="mark">2701</text>
+                        笔
+                    </view>
+                </view>
+            </view>
+            <view class="item">
+                <view class="block">
+                    <view>
+                        3个月内收到的举报:
+                        <text class="mark">0</text>
+                        1年内收到的举报:
+                        <text class="mark">0</text>
+                    </view>
+                    <view>
+                        3个月内收到的投诉:
+                        <text class="mark">0</text>
+                        1年内收到的投诉:
+                        <text class="mark">0</text>
+                    </view>
+                    <view>
+                        3个月内收到的差评:
+                        <text class="mark">0</text>
+                        1年内收到的差评:
+                        <text class="mark">0</text>
+                    </view>
+                </view>
+            </view>
+            <navigator open-type="navigate" url="/pages/storeComment/storeComment?UserId={{UserId}}&RaBisnesType=2" class="item">
+                <image src="/asset/imgs/arrow.png" class="bg-img"></image>
+                <view class="block">
+                    <view>卖家信用</view>
+                    <view>
+                        好评率：
+                        <text class="mark">99.8%</text>
+                    </view>
+                </view>
+            </navigator>
+            <navigator open-type="navigate" url="/pages/storeComment/storeComment?UserId={{UserId}}&RaBisnesType=1" class="item">
+                <image src="/asset/imgs/arrow.png" class="bg-img"></image>
+                <view class="block">
+                    <view>买家信用</view>
+                    <view>
+                        好评率：
+                        <text class="mark">100%</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="section">
+            <view class="item">
+                <image src="/asset/imgs/arrow.png" class="bg-img"></image>
+                <view>等级说明</view>
+            </view>
+        </view>
+        <view class="section">
+            <view class="item">
+                <view class="block">店铺简介</view>
+            </view>
+            <view class="item">
+                <view class="block" style="padding:40rpx">人不可无德，商不可无信</view>
+            </view>
+        </view>
+    </view>
+</view>

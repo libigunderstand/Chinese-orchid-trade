@@ -6,46 +6,86 @@ Page({
     data: {
         ShopItem: null,
         RateInfo: null,
-        Page: 1,
+        page: 1,
         pageSize: 20,
-        UserId: "16ffaf478ab79d5f22bff313bbaecf55",
         list: [],
-        selectIndex: 0
+        selectIndex: 0,
+        selectType: null,
+        isReachBottomLoadData: false,
+        isNoMoreData: false,
+        isNoData: false,
+        UserId: null,
+        isFixed: false
+
     },
 
+    // 加载数据
     handleLoadList(opts = {}) {
         const that = this;
         wx.request({
             url: "http://m.hmlan.com/Auction/GetListAuctionP",
             data: {
-                Page: that.data.Page,
+                page: that.data.page,
                 pageSize: that.data.pageSize,
                 SellerId: that.data.UserId,
                 ...opts
             },
             success(res) {
+                wx.hideToast();
+                let list = that.data.list;
+                let loadList = res.data.ListAuctionP;
+                if (!loadList) {
+                    that.setData({
+                        isNoMoreData: true
+                    });
+                    return;
+                }
+                list = list.concat(loadList);
                 that.setData({
-                    list: res.data.ListAuctionP,
-                    Page: that.data.Page + 1
+                    list,
+                    page: that.data.page + 1,
+                    isReachBottomLoadData: false
                 });
             }
         });
-  },
-  handleItemSelect(e) {
-    const that=this
-    let { dataset } = e.currentTarget
-    that.setData({
-      selectIndex: dataset.index,
-      page:1
-    })
-  },
+    },
+
+    // 处理选择
+    handleItemSelect(e) {
+        const that = this;
+        wx.showToast({
+            title: "数据加载中...",
+            icon: "loading"
+        });
+        let { dataset } = e.currentTarget;
+        that.setData(
+            {
+                selectIndex: dataset.index,
+                selectType: dataset.type,
+                page: 1,
+                list: [],
+                isNoMoreData: false
+            },
+            () => {
+                if (dataset.type) {
+                    that.handleLoadList({ [dataset.type]: dataset.value });
+                } else {
+                    that.handleLoadList();
+                }
+            }
+        );
+    },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
         const that = this;
-        const UserId = "16ffaf478ab79d5f22bff313bbaecf55";
+        const UserId = options.UserId;
+        that.static = {};
+        that.setData({
+            UserId
+        });
         wx.hideTabBar();
         wx.showToast({
             title: "数据加载中...",
@@ -54,16 +94,17 @@ Page({
         wx.request({
             url: `http://m.hmlan.com/Shop/GetShopItem?UserId=${UserId}`,
             success(res) {
-                wx.hideToast();
                 that.setData({
                     ShopItem: res.data
+                });
+                wx.setNavigationBarTitle({
+                    title: res.data.ShopItem.ShopName
                 });
             }
         });
         wx.request({
             url: "http://m.hmlan.com/User/RateInfo?UserId=" + UserId,
             success(res) {
-                wx.hideToast();
                 that.setData({
                     RateInfo: res.data.Rates
                 });
@@ -71,41 +112,39 @@ Page({
         });
         that.handleLoadList();
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function() {},
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function() {},
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function() {
-        wx.showTabBar();
+    onReady() {
+        // const query = wx.createSelectorQuery();
+        // query.select(".list-nav").boundingClientRect(function(res) {
+        //     console.log(res);
+        // });
+        // query.exec();
+        // const that = this;
+        // wx.createIntersectionObserver(this)
+        //     .relativeToViewport({ top: -40 })
+        //     .observe(".list-nav", (e) => {
+        //         that.setData({
+        //             isFixed: e.intersectionRatio <0.01
+        //         });
+        //     });
     },
 
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function() {},
+    onPageScroll(e) {
+        if (e.scrollTop > 215 !== this.data.isFixed) {
+            this.setData({
+                isFixed:!this.data.isFixed
+            })
+        }
+    },
+    onReachBottom: function() {
+        const that = this;
+        let selectType = that.data.selectType;
+        if (that.data.isReachBottomLoadData || that.data.isNoMoreData) return;
+        that.setData({
+            isReachBottomLoadData: true
+        });
+        if (selectType) that.handleLoadList({ selectType });
+        else that.handleLoadList();
+    },
 
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function() {},
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function() {},
-
-    /**
-     * 用户点击右上角分享
-     */
     onShareAppMessage: function() {}
 });
