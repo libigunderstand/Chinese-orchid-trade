@@ -38,7 +38,7 @@
   </view>
   <view class="ser-tip" wx:if="{{value !== ''}}">
     <text class="title">搜索："{{value}}"</text>
-    <view class="title1" wx:for="{{keylist}}" wx:key="index">
+    <view class="title1" wx:for="{{keylist}}" data-name="{{item}}" wx:key="index" bindtap="toStorage">
       <image src="/resources/sousuo.png" class="sou-img"></image>
       <text>{{item}}</text>
     </view>

@@ -106,6 +106,9 @@ Page({
     wx.navigateTo({
       url: `/pages/searchResult/searchResult?goodsName=${e.target.dataset.name}`,
     })
+    this.setData({
+      value: ''
+    })
   },
   toHome() {
    wx.switchTab({
