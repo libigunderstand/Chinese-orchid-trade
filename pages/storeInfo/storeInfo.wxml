@@ -80,7 +80,7 @@
                     </view>
                 </view>
             </view>
-            <navigator open-type="navigate" url="/pages/storeComment/storeComment?UserId={{UserId}}&RaBisnesType=2" class="item">
+            <navigator open-type="navigate" url="/pages/storeComment/storeComment?UserId={{storeData.BaseUser.UserId}}&RaBisnesType=2" class="item">
                 <image src="/asset/imgs/arrow.png" class="bg-img"></image>
                 <view class="block">
                     <view>卖家信用</view>
@@ -90,7 +90,7 @@
                     </view>
                 </view>
             </navigator>
-            <navigator open-type="navigate" url="/pages/storeComment/storeComment?UserId={{UserId}}&RaBisnesType=1" class="item">
+            <navigator open-type="navigate" url="/pages/storeComment/storeComment?UserId={{storeData.BaseUser.UserId}}&RaBisnesType=1" class="item">
                 <image src="/asset/imgs/arrow.png" class="bg-img"></image>
                 <view class="block">
                     <view>买家信用</view>

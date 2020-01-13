@@ -59,7 +59,7 @@ Page({
         this.handleLoadComment();
     },
 
-    onLoad: function(options) {
+    onLoad: function (options) {
         const that = this;
         let { UserId, RaBisnesType } = options;
         wx.setNavigationBarTitle({
@@ -79,8 +79,6 @@ Page({
         wx.request({
             url: "http://m.hmlan.com/User/RateInfo?userId=" + UserId,
             success(res) {
-                console.log(res);
-                
                 that.setData({
                     userInfo: res.data.Rates
                 });
