@@ -16,7 +16,7 @@
         </view>
         <block wx:if="{{isShowSelectBar}}">
             <select-bar selectList="{{selectArr[selectType]}}" bindHandleSelect="handleSelectType"></select-bar>
-            <view class="mask" bindtap="handleTapMsk"></view>
+            <view class="msk" bindtap="handleTapMsk"></view>
         </block>
     </view>
     <scroll-view scroll-y  bindscrolltolower="handlePullLoading" class="main">

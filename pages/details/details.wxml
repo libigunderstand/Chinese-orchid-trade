@@ -16,7 +16,7 @@
         </view>
     </view>
     <view class="list-wrapper">
-        <navigator class="list-item" wx:for="{{list}}" wx:key="AucHits" url="/pages/storeInfo/storeInfo?UserId={{item.UserId}}">
+        <navigator class="list-item" wx:for="{{list}}" wx:key="AucHits" url="/pages/goodsdetail/goodsdetail?id={{item.AucId}}">
             <image src="{{item.SmallSrc}}" lazy-load="{{true}}"></image>
             <view class="item-info">
                 <view class="item-title">{{item.AucTitle}}</view>
