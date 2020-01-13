@@ -1,4 +1,36 @@
 <!--pages/forum/forum.wxml-->
-<view>
-  论坛页~
+<view class="container">
+  <view class="tabbar">
+    <block wx:for="{{tab}}" wx:key="index">
+      <view class="tabbar-item {{currentTab == index?'active':''}}" data-index='{{index}}' bindtap="switchTab">
+        {{item.text}}
+      </view>
+    </block>
+  </view>
+  <view class="page">
+    <swiper current="{{currentTab}}" bindanimationfinish="swiperChange">
+      <block wx:for="{{tab}}" wx:key="index">
+        <swiper-item class="swiper-content">
+          <scroll-view scroll-y="true" bindscrolltolower="loading">
+            <view class="items" wx:for="{{datas[currentTab].list}}" wx:key="index">
+              <view class="top">
+                <text class="icon xin">新</text>
+                <text class="title">{{item.TopicTitle}}</text>
+                <text class="icon tu">图</text>
+                <text class="icon jing">精</text>
+                <text class="icon yuan">原</text>
+              </view>
+              <view class="middle">
+                <text>{{item.TopicAuthor}}</text>
+                <view class="right">最后回复：<text>{{item.TopicLastName}}</text></view>
+              </view>
+              <view class="bottom">
+                {{item.BoaName}}
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 </view>

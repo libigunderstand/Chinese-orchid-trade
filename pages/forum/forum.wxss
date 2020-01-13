@@ -1,1 +1,92 @@
 /* pages/forum/forum.wxss */
+.container{
+  height: 100%;
+}
+scroll-view{
+  height:100%;
+}
+swiper{
+  height: 100%;
+}
+.tabbar {
+  height: 38px;
+  background: white;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  color: #666;
+}
+
+.tabbar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.tabbar-item.active{
+  color: #95c519;
+  box-shadow: inset 0 -2px 0px #95c519;
+}
+
+.page{
+  height: 100%;
+}
+.items{
+  padding: 15px 15px 5px 15px;
+  position: relative;
+}
+.icon{
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #fff;
+  padding: 0 2px;
+  vertical-align: text-top;
+  margin: 0 3px;
+}
+.icon.xin{
+  background: #ff0000;
+}
+.icon.tu{
+  background: #95c517;
+}
+.icon.jing{
+  background: #ff7700;
+}
+.icon.yuan{
+  background: #007aff;
+}
+
+.top{
+  color: #666;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+
+}
+.title{
+  display: inline-block;
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.middle,.bottom{
+  color: #999;
+  font-size: 13px;
+}
+.middle text{
+  color: #95c519;
+}
+.right{
+  float: right;
+}

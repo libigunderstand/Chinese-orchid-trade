@@ -5,23 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
+    page:1,
+    list:[]
   },
 
-  getDatas(){
+  getDatas(pageNo){
     var that = this
     wx.request({
-      url: 'https://m.hmlan.com/Member/Attention/ListTuiShopAuctions?&page=1&pagesize',
+      url: 'https://m.hmlan.com/Member/Attention/ListTuiShopAuctions?&page={{page}}&pagesize',
       data: {
+        page: pageNo
       },
       header: {
         'content-type': 'application/json'
       },
       success (res) {
         that.setData({
-          data: res.data
+          page: pageNo+1,
+          list: that.data.list.concat(res.data)
         })
-        console.log(that.data);
-        
       }
     })
   },
@@ -30,7 +32,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getDatas()
+    this.getDatas(this.data.page)
   },
 
   /**
@@ -72,7 +74,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.getDatas(this.data.page)
   },
 
   /**

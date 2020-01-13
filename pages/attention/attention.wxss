@@ -12,7 +12,7 @@ page{
 .login text{
   display: block;
   text-align: center;
-  color: #999;
+  color: #666;
   font-size: 15px;
   padding: 2px 0;
 }
@@ -30,7 +30,7 @@ page{
 .recom{
   line-height: 30px;
   margin-left: 12px;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #666;
 }
 
@@ -42,7 +42,7 @@ page{
 }
 
 .panel .items{
-  width: 172px;
+  width: 344rpx;
   background: #fff;
   border-radius: 6px;
   margin-bottom: 10px;
@@ -54,13 +54,21 @@ page{
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.items .hua{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80rpx;
+  height: 80rpx;
 }
 
 .items image{
-  width: 185px;
-  height: 185px;
+  width: 370rpx;
+  height: 370rpx;
 }
 
 .details .title{
@@ -69,13 +77,14 @@ page{
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 0 9px;
-  color: #666;
+  color: #000;
+  font-size: 32rpx;
 }
 
 .details .price{
   padding: 0 9px 1px 5px;
   color: #f60000;
-  font-size: 14px;
+  font-size: 28rpx;
 }
 
 .details .shop{
@@ -101,6 +110,17 @@ page{
   white-space: nowrap;
   margin-left: 41px;
   margin-top: -36px;
+}
+
+.loading{
+  padding: 13px 0;
+  text-align: center;
+  color: #999;
+}
+
+.loading image{
+  width: 16px;
+  height: 16px;
 }
 
 .ml5{

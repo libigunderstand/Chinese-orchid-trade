@@ -5,22 +5,30 @@
 </view>
 <view class="recom">为您推荐</view>
 <view class="panel">
-  <view class="items" wx:for="{{data}}" wx:key="unique">
-    <image wx:if="{{item.EmsTraPrice==0}}" class="free" src="https://static.hmlan.com/h5/img/free.png"></image>
-    <image src="{{item.MidSrc}}"></image>
+  <view class="items" wx:for="{{list}}" wx:key="unique">
+    <navigator url="/pages/details/details?UserId={{item.AucId}}">
+      <image wx:if="{{item.EmsTraPrice==0}}" class="free" src="https://static.hmlan.com/h5/img/free.png"></image>
+      <image wx:if="{{item.OrchidFloSort!=0&&item.OrchidFloSort!=1}}" class="hua" src="https://static.hmlan.com/h5/img/hua.png"></image>
+      <image src="{{item.MidSrc}}"></image>
+    </navigator>
     <view class="details">
-      <text class="title">{{item.AucTitle}}</text>
+      <navigator url="/pages/details/details?UserId={{item.AucId}}">
+        <text class="title">{{item.AucTitle}}</text>
+      </navigator>
       <view class="price">
-        <icon class=" iconfont icon-renminbi"></icon>
+        <icon class="iconfont icon-renminbi"></icon>
         <text wx:if="{{item.AucType!=1}}">{{item.StartPrice}}</text>
         <text wx:if="{{item.AucType==1}}">{{item.ImmPrice}}</text>
-        <icon wx:if="{{item.AucType!=1}}" class=" iconfont icon-paimaizhuanchangmorenz ml5"></icon>
-        <icon wx:if="{{item.AucType!=0}}" class=" iconfont icon-jiage ml5"></icon>
+        <icon wx:if="{{item.AucType!=1}}" class="iconfont icon-paimaizhuanchangmorenz ml5"></icon>
+        <icon wx:if="{{item.AucType!=0}}" class="iconfont icon-jiage ml5"></icon>
       </view>
-      <view class="shop">
+      <navigator class="shop" url="/pages/details/details?UserId={{item.AucId}}">
         <image src="{{item.ShopIcon}}"></image>
         <text>{{item.ShopName}}</text>
-      </view>
+      </navigator>
     </view>
   </view>
+</view>
+<view class="loading">
+  <image src="https://static.hmlan.com/h5/img/loading.gif"></image>加载中...
 </view>
