@@ -1,0 +1,10 @@
+<!--pages/searchResult/searchResult.wxml-->
+<view class="top">
+  <view class="back-wrap" bindtap="back">
+    <image src="/resources/back.png" class="back"/>
+  </view>
+  {{titleValue}}
+  <view class="sou-wrap" bindtap="sou">
+    <icon class="iconfont iconsousuo" style="font-size: 56rpx;"></icon>
+  </view>
+</view>

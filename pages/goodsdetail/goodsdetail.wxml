@@ -43,4 +43,13 @@
       </navigator>
     </view>
   </view>
+  <view class="goodsMsg">
+    <view class="msgtitle">{{totaldata.AucItem.AucTitle}}</view>
+    <view class="msg-item">起拍价：￥{{totaldata.AucItem.StartPrice}}</view>
+    <view class="msg-item">加价幅度：￥{{totaldata.AucItem.ExtPrice}}</view>
+    <view class="msg-item">最新叫价：￥{{totaldata.AucItem.TopPrice}}</view>
+    <view class="msg-item">一口价：￥{{totaldata.AucItem.ImmPrice}}</view>
+    <view class="msg-item">运费：￥{{totaldata.AucItem.EmsTraPrice}}</view>
+    <view class="msg-item">已有{{totaldata.AucItem.PriceNum}}人出价</view>
+  </view>
 </view>

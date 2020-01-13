@@ -112,3 +112,20 @@ swiper-item image {
   border-radius: 10rpx;
   z-index: 999;
 }
+.goodsMsg {
+  width: 100%;
+  padding: 20rpx 30rpx;
+  color: #666;
+  min-height: 190rpx;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.msg-item {
+  width: 50%;
+  margin: 16rpx 0 0;
+}
+.msgtitle {
+  display: block;
+  width: 100%;
+}

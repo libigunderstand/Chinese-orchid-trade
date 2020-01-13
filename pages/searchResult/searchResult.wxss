@@ -1,0 +1,33 @@
+/* pages/searchResult/searchResult.wxss */
+.top {
+  height: 88rpx;
+  background: #95c519;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+  line-height: 88rpx;
+  color: #fff;
+  font-size: 40rpx;
+}
+.back-wrap {
+  width: 100rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.back {
+  display: block;
+  margin: 16rpx auto 0;
+  width: 56rpx;
+  height: 50rpx;
+}
+.sou-wrap {
+  width: 100rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

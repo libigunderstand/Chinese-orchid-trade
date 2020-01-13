@@ -54,6 +54,9 @@ Page({
       this.setData({
         value: ''
       })
+      wx.navigateTo({
+        url: `/pages/searchResult/searchResult?goodsName=${this.data.value}`,
+      })
     }else {
       wx.showToast({
         title: '请输入搜索关键字',
@@ -100,12 +103,20 @@ Page({
     let history = this.data.history
     history.push(e.target.dataset.name)
     wx.setStorageSync('serHistory', history)
-    console.log(e.target.dataset.name)
+    wx.navigateTo({
+      url: `/pages/searchResult/searchResult?goodsName=${e.target.dataset.name}`,
+    })
   },
   toHome() {
    wx.switchTab({
      url: '/pages/index/index',
    })
+  },
+  //跳转搜索结果页
+  toSearchResult(e) {
+    wx.navigateTo({
+      url: `/pages/searchResult/searchResult?goodsName=${e.target.dataset.value}`,
+    })
   },
   onReady: function () {
   },

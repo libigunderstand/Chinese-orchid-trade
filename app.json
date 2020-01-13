@@ -11,7 +11,8 @@
     "pages/index/message/message",
     "pages/storeInfo/storeInfo",
     "pages/goodsdetail/goodsdetail",
-    "pages/storeComment/storeComment"
+    "pages/storeComment/storeComment",
+    "pages/searchResult/searchResult"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -25,7 +25,7 @@
   <view class="history">
     <view class="his-item" wx:for="{{history}}" wx:key="index">
       <image src="/resources/time.png" class="left"/>
-      <text class="content">{{item}}</text>
+      <text class="content" data-value="{{item}}" bindtap="toSearchResult">{{item}}</text>
       <image src="/resources/delete.png" id="{{index}}" class="right" bindtap="handleDelete"/>
     </view>
   </view>
