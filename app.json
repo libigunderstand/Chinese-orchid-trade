@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/personal/personal",
     "pages/index/index",
     "pages/attention/attention",
     "pages/store/store",
@@ -13,7 +12,8 @@
     "pages/storeInfo/storeInfo",
     "pages/goodsdetail/goodsdetail",
     "pages/storeComment/storeComment",
-    "pages/searchResult/searchResult"
+    "pages/searchResult/searchResult",
+    "pages/personal/personal"
   ],
   "window": {
     "backgroundTextStyle": "light",
