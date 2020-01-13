@@ -1,5 +1,5 @@
 <view class="content">
-    <store-tab-bar type="store" UserId="{{UserId}}"></store-tab-bar>
+    <store-tab-bar type="store" UserId="{{storeData.BaseUser.UserId}}"></store-tab-bar>
     <view class="user-info">
         <view class="user">
             <view class="left">
@@ -21,8 +21,8 @@
             </view>
         </view>
         <view class="btns">
-            <view class="btn1">个人主页</view>
-            <view class="btn1">关注卖家</view>
+            <navigator open-type="navigate" url="/pages/personal/personal?UserId={{storeData.BaseUser.UserId}}" class="btn1">个人主页</navigator>
+            <navigator class="btn1">关注卖家</navigator>
         </view>
         <view class="section">
             <view class="item">

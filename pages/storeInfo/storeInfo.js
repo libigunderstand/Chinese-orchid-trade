@@ -1,6 +1,5 @@
 Page({
     data: {
-        UserId: null,
         storeData: null
     },
     onLoad(options) {
@@ -9,9 +8,10 @@ Page({
         wx.request({
             url: "http://m.hmlan.com/Shop/GetShopItem?UserId=" + UserId,
             success(res) {
+                console.log(res);
+                
                 that.setData({
-                    storeData: res.data,
-                    UserId
+                    storeData: res.data
                 });
             }
         });

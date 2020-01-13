@@ -80,7 +80,7 @@ Page({
                 selectType: null,
                 isShowSelectBar: false,
                 isNoMoreData: false,
-                isNoData: false,
+                isNoData: false
             },
             () => {
                 let Loc = this.data.Loc;
@@ -112,6 +112,12 @@ Page({
                 selectAnimation: this.selectAnimation.export()
             });
         }
+    },
+    handleTapMsk() {
+        this.setData({
+            selectType: null,
+            isShowSelectBar: false
+        });
     },
     // 滑动到底逻辑
     handlePullLoading() {
