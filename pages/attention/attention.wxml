@@ -6,13 +6,13 @@
 <view class="recom">为您推荐</view>
 <view class="panel">
   <view class="items" wx:for="{{list}}" wx:key="unique">
-    <navigator url="/pages/details/details?UserId={{item.AucId}}">
+    <navigator url="/pages/goodsdetail/goodsdetail?id={{item.AucId}}">
       <image wx:if="{{item.EmsTraPrice==0}}" class="free" src="https://static.hmlan.com/h5/img/free.png"></image>
       <image wx:if="{{item.OrchidFloSort!=0&&item.OrchidFloSort!=1}}" class="hua" src="https://static.hmlan.com/h5/img/hua.png"></image>
       <image src="{{item.MidSrc}}"></image>
     </navigator>
     <view class="details">
-      <navigator url="/pages/details/details?UserId={{item.AucId}}">
+      <navigator url="/pages/goodsdetail/goodsdetail?id={{item.AucId}}">
         <text class="title">{{item.AucTitle}}</text>
       </navigator>
       <view class="price">
@@ -22,7 +22,7 @@
         <icon wx:if="{{item.AucType!=1}}" class="iconfont icon-paimaizhuanchangmorenz ml5"></icon>
         <icon wx:if="{{item.AucType!=0}}" class="iconfont icon-jiage ml5"></icon>
       </view>
-      <navigator class="shop" url="/pages/details/details?UserId={{item.AucId}}">
+      <navigator class="shop" url="/pages/details/details?UserId={{item.SellerId}}&ShopName={{item.ShopName}}">
         <image src="{{item.ShopIcon}}"></image>
         <text>{{item.ShopName}}</text>
       </navigator>
